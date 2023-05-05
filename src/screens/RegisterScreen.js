@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import { Display } from '../utils';
-import { Colors, Images } from '../contants';
+import { Color, Images } from '../contants';
 import { InputWithIcon } from '../components';
 
 const RegisterScreen = ({ navigation }) => {
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.DEFAULT_GREEN,
+    backgroundColor: Color.DEFAULT_GREEN,
     position: 'relative'
   },
   image: {
@@ -82,10 +82,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 32,
     textTransform: 'uppercase',
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
   },
   button: {
-    backgroundColor: Colors.DEFAULT_YELLOW,
+    backgroundColor: Color.DEFAULT_YELLOW,
     borderRadius: 30,
     paddingHorizontal: 20,
     paddingVertical: 14,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   goToBackBtnText: {
     fontSize: 20,
-    color: Colors.DEFAULT_WHITE
+    color: Color.DEFAULT_WHITE
   }
 });
 

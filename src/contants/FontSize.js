@@ -1,0 +1,18 @@
+export default {
+  size_lg: 18,
+  size_sm: 14,
+  size_13xl: 32,
+  size_base: 16,
+  size_6xl: 25,
+  size_xs: 12,
+  size_3xs: 10,
+  size_xl: 20,
+  size_mini: 15,
+  size_smi: 13,
+  size_7xs: 6,
+  size_21xl: 40,
+  size_11xl: 30,
+  size_5xs: 8,
+  size_2xs: 11,
+  size_5xl: 24,
+};

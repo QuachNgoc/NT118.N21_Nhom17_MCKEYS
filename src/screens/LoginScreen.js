@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
-import { Colors, Images } from '../contants';
+import { Color, Images } from '../contants';
 import { Display } from '../utils';
 import { InputWithIcon } from '../components';
 
@@ -46,7 +46,7 @@ const LoginScreen = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.register}
-        onPress={() => navigation.navigate('RegisterScreen')}
+        onPress={() => navigation.navigate('Home')}
       >
         <Text style={styles.registerText}>
           Haven't had account yet? Register now
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.DEFAULT_GREEN,
+    backgroundColor: Color.DEFAULT_GREEN,
   },
   image: {
     height: Display.setHeight(16),
@@ -80,10 +80,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 32,
     textTransform: 'uppercase',
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
   },
   button: {
-    backgroundColor: Colors.DEFAULT_YELLOW,
+    backgroundColor: Color.DEFAULT_YELLOW,
     borderRadius: 30,
     paddingHorizontal: 20,
     paddingVertical: 14,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   divider: {
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
     fontWeight: 500,
     fontSize: 20,
     paddingVertical: 20,
@@ -109,21 +109,21 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   registerText: {
-    color: Colors.LIGHT_GREEN,
+    color: Color.LIGHT_GREEN,
     fontSize: 18,
     textDecorationLine: 'underline',
   },
   googleBtn: {
     flexDirection: 'row',
     width: '80%',
-    backgroundColor: Colors.DEFAULT_WHITE,
+    backgroundColor: Color.DEFAULT_WHITE,
     height: 55,
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center'
   },
   googleBtnText: {
-    color: Colors.DEFAULT_BLACK,
+    color: Color.DEFAULT_BLACK,
     fontSize: 19,
      marginLeft: 12
   },
