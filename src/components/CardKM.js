@@ -12,17 +12,17 @@ import { FontSize, Border, Color, Images } from "../contants";
 
 const CardKM = ({style}) => {
   return (
-    <View style={[styles.mnKhuynMi, styles.khuynLayout, style]}>
-      <View style={[styles.mnKhuynMiChild, styles.khuynLayout]} />
+    <View style={[styles.mnkhuyenmai, styles.khuyenmaiLayout, style]}>
+      <View style={[styles.mnkhuyenmaiChild, styles.khuyenmaiLayout]} />
       <Image
-        style={[styles.imgIcon, styles.mnNLayout]}
+        style={[styles.imgIcon, styles.monNgonLayout]}
         resizeMode="cover"
         source={Images.SAMPLE_IMG}
       />
-      <Text style={[styles.comboMnKhuyn, styles.text3Typo]}>
+      <Text style={[styles.comboMnKhuyn, styles.giaTypo]}>
         Combo món khuyến mãi số 1
       </Text>
-      <Text style={[styles.text3, styles.text3Layout]}>999.000đ</Text>
+      <Text style={[styles.gia, styles.giaLayout]}>999.000đ</Text>
       <View style={[styles.orderbtn, styles.orderbtnLayout]}>
         <Image
           style={[styles.uploadImgIcon, styles.uploadImgIconPosition]}
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     height: 21,
   },
-  mnNLayout: {
+  monNgonLayout: {
     width: 141,
     position: "absolute",
   },
@@ -96,19 +96,19 @@ const styles = StyleSheet.create({
     left: 10,
     position: "absolute",
   },
-  khuynLayout: {
+  khuyenmaiLayout: {
     height: 138,
     width: 369,
     position: "absolute",
   },
-  text3Typo: {
+  giaTypo: {
     left: 163,
     textAlign: "left",
     fontWeight: "700",
     fontSize: FontSize.size_mini,
     position: "absolute",
   },
-  text3Layout: {
+  giaLayout: {
     height: 25,
     width: 77,
   },
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     height: 1,
     position: "absolute",
   },
-  mnNgonPhi: {
+  monNgonPhaiThu: {
     width: 198,
     textAlign: "left",
     color: Color.white,
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     top: 0,
     position: "absolute",
   },
-  xemTtC: {
+  xemtatca: {
     left: 241,
     color: "#fffdfd",
     width: 147,
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
     left: 21,
     overflow: "hidden",
   },
-  khuynMiSp: {
+  khuyenmaiSp: {
     width: 182,
     textAlign: "left",
     color: Color.white,
@@ -339,12 +339,12 @@ const styles = StyleSheet.create({
     top: 0,
     position: "absolute",
   },
-  xemTtC1: {
+  xemtatca1: {
     width: 120,
     textAlign: "left",
     color: Color.white,
   },
-  xemTtCContainer: {
+  xemtatcaContainer: {
     left: 255,
     top: 0,
     position: "absolute",
@@ -354,7 +354,7 @@ const styles = StyleSheet.create({
     left: 2,
     top: 0,
   },
-  mnKhuynMiChild: {
+  mnkhuyenmaiChild: {
     borderWidth: 2,
     borderStyle: "solid",
     borderColor: "#fd8d26",
@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
     height: 48,
     color: Color.black,
   },
-  text3: {
+  gia: {
     top: 91,
     left: 163,
     textAlign: "left",
@@ -400,15 +400,15 @@ const styles = StyleSheet.create({
     left: 254,
     width: 101,
   },
-  mnKhuynMi: {
+  mnkhuyenmai: {
     left: 2,
     top: 0,
   },
-  mnKhuynMi1: {
+  mnkhuyenmai1: {
     top: 153,
     left: 2,
   },
-  mnKhuynMi2: {
+  mnkhuyenmai2: {
     top: 306,
     left: 0,
   },

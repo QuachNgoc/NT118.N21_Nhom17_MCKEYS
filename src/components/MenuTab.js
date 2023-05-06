@@ -42,10 +42,10 @@ const MenuTab = () => {
               source={require("../../assets/images/Vector1.png")}
             />
           </View>
-          <View style={styles.khuynMi}>
+          <View style={styles.khuyenmai}>
             <Text style={[styles.sales, styles.salesTypo]}>SALES</Text>
             <Image
-              style={[styles.khuynMiChild, styles.iconfeatherIconLayout]}
+              style={[styles.khuyenmaiChild, styles.iconfeatherIconLayout]}
               resizeMode="cover"
               source={require("../../assets/images/Ellipse3.png")}
             />
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     left: 2,
     position: "absolute",
   },
-  khuynMiChild: {
+  khuyenmaiChild: {
     top: 13,
     height: 22,
     width: 22,
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     bottom: "17.36%",
     left: "19.38%",
   },
-  khuynMi: {
+  khuyenmai: {
     left: 57,
     width: 27,
     height: 35,
