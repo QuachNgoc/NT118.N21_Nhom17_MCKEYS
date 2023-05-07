@@ -19,7 +19,7 @@ const Navigators = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="ProfileScreen"
+        initialRouteName="Home"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="SplashScreen" component={SplashScreen} />

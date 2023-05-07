@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import { Display } from '../utils';
-import { Colors, Images } from '../contants';
+import { Color, Images } from '../contants';
 import { GoBackBtn, InputWithIcon } from '../components';
 
 

@@ -9,7 +9,7 @@ import {
   FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { Colors, Images } from '../contants';
+import { Color, Images } from '../contants';
 import GoBackBtn from '../components/GoBackBtn';
 
 const DATA = [
@@ -115,14 +115,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '100%',
-    backgroundColor: Colors.LIGHT_GREY,
+    backgroundColor: Color.LIGHT_GREY,
   },
   titleContainer: {
     flexDirection: 'column',
     alignItems: 'center',
     paddingTop: 60,
     paddingBottom: 100,
-    backgroundColor: Colors.DEFAULT_GREEN,
+    backgroundColor: Color.DEFAULT_GREEN,
     width: '100%',
     position: 'relative',
     marginBottom: 90,
@@ -130,14 +130,14 @@ const styles = StyleSheet.create({
   title: {
     textTransform: 'uppercase',
     fontSize: 24,
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
     marginBottom: 40,
   },
   userContainer: {
     flexDirection: 'row',
     paddingVertical: 15,
     paddingHorizontal: 10,
-    backgroundColor: Colors.SECONDARY_WHITE,
+    backgroundColor: Color.SECONDARY_WHITE,
     width: '88%',
     borderRadius: 10,
   },
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: Colors.DARK_FIVE,
+    borderColor: Color.DARK_FIVE,
     height: 70,
     width: 70,
     borderRadius: 35,
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   userEdit: {
-    borderColor: Colors.DARK_FIVE,
+    borderColor: Color.DARK_FIVE,
     borderRadius: 8,
     borderWidth: 1,
     width: '60%',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   infoContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    backgroundColor: Colors.DEFAULT_WHITE,
+    backgroundColor: Color.DEFAULT_WHITE,
     width: '88%',
     position: 'absolute',
     top: 280,
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
   infoItemText: {
-    color: Colors.DARK_FOUR,
+    color: Color.DARK_FOUR,
     fontSize: 16,
     marginTop: 4,
   },
@@ -215,22 +215,22 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginHorizontal: 10,
     fontWeight: 500,
-    color: Colors.DARK_FOUR,
+    color: Color.DARK_FOUR,
   },
   profileItemText: {
     fontSize: 20,
     fontWeight: 500,
-    color: Colors.DARK_FOUR,
+    color: Color.DARK_FOUR,
   },
   profileItemRight: {
     fontSize: 18,
     position: 'absolute',
     right: 10,
-    color: Colors.DARK_FIVE,
+    color: Color.DARK_FIVE,
   },
   line: {
     height: 1,
-    backgroundColor: Colors.DARK_FIVE,
+    backgroundColor: Color.DARK_FIVE,
     width: '92%',
     position: 'absolute',
     bottom: 0,
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
   logout: {
     flexDirection: 'row',
     width: '80%',
-    backgroundColor: Colors.DEFAULT_RED,
+    backgroundColor: Color.DEFAULT_RED,
     alignItems: 'center',
     borderRadius: 9,
     padding: 12,
@@ -247,12 +247,12 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   logoutIcon: {
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
     fontSize: 22,
     marginRight: 8,
   },
   logoutText: {
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
     fontSize: 22,
     fontWeight: 'bold',
   },

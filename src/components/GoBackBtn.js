@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import { Colors } from '../contants';
+import { Color } from '../contants';
 
 const GoBackBtn = ({navigation, text, navigateTo }) => {
 
@@ -36,7 +36,7 @@ const styles = {
   },
   goToBackBtnText: {
     fontSize: 20,
-    color: Colors.DEFAULT_WHITE
+    color: Color.DEFAULT_WHITE
   }
 }
 

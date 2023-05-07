@@ -5,7 +5,7 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import { Colors, Images } from '../contants';
+import { Color, Images } from '../contants';
 import { GoBackBtn } from '../components';
 
 const ProfileEditScreen = ({ navigation }) => {
@@ -18,7 +18,7 @@ const ProfileEditScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.DEFAULT_GREEN,
+    backgroundColor: Color.DEFAULT_GREEN,
     height: '100%',
   },
 });
