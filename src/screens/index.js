@@ -3,4 +3,6 @@ import LoginScreen from './LoginScreen';
 import RegisterScreen from './RegisterScreen';
 import OnBoardingScreen from './OnBoardingScreen';
 import Home from "./Home";
-export { SplashScreen, LoginScreen, RegisterScreen, OnBoardingScreen, Home };
+import KhuyenMaiScreen from "./KhuyenMaiScreen";
+import DoiDiemScreen from './DoiDiemScreen';
+export { SplashScreen, LoginScreen, RegisterScreen, OnBoardingScreen, Home, KhuyenMaiScreen, DoiDiemScreen};

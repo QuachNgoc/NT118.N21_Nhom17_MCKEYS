@@ -5,7 +5,8 @@ import { Images, Color, Border, FontSize } from "../contants";
 
 const handlePress = () => {};
 
-const CardKM = () => {
+
+const CardDoiDiem = () => {
   return (
     <View style={[styles.monkhuyenmai, styles.khuyenmaiLayout]}>
       <View style={[styles.monkhuyenmaiChild, styles.khuyenmaiLayout]} />
@@ -17,13 +18,13 @@ const CardKM = () => {
       <Text style={[styles.comboMonKhuyenMai, styles.giaTypo]}>
         Combo món khuyến mãi số 1
       </Text>
-      <Text style={[styles.gia, styles.giaLayout]}>999.000đ</Text>
+      <Text style={[styles.gia, styles.giaLayout]}>999 điểm</Text>
       <View style={[styles.orderbtn, styles.orderbtnLayout]}>
         <TouchableOpacity
           style={[styles.buttonIcon, styles.buttonPosition]}
           onPress={handlePress}
         >
-          <Text style={[styles.DatNgay, styles.DatNgayTypo]}>Đặt Ngay</Text>
+          <Text style={[styles.DatNgay, styles.DatNgayTypo]}>Đổi ngay</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     top: 0,
   },
   khuyenmaiLayout: {
-    height: 138,
+    height: 120,
     width: 369,
     // position: "absolute",
     marginTop:10
@@ -51,8 +52,8 @@ const styles = StyleSheet.create({
     top: 0,
   },
   imgIcon: {
-    top: 8,
-    height: 124,
+    top: "13%",
+    height: "90%",
     left: 7,
     borderRadius: Border.br_xl,
   },
@@ -62,15 +63,15 @@ const styles = StyleSheet.create({
   },
   comboMonKhuyenMai: {
     top: 27,
-    width: 184,
-    height: 48,
+    width: 185,
+    height: 50,
     color: Color.black,
   },
   giaTypo: {
     left: 163,
     textAlign: "left",
     fontWeight: "700",
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.size_lg,
     position: "absolute",
   },
   gia: {
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
   buttonIcon: {
     width: 102,
     height: 23,
+    backgroundColor: Color.orangered_200,
   },
   buttonPosition: {
     left: -1,
@@ -105,7 +107,6 @@ const styles = StyleSheet.create({
     borderRadius: Border.br_xl,
     position: "absolute",
     borderWidth: 1,
-    backgroundColor: Color.orangered_200,
     borderColor: Color.darkorange_200,
     alignItems: "center",
   },
@@ -123,4 +124,4 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
 });
-export default CardKM;
+export default CardDoiDiem;

@@ -6,75 +6,72 @@ import {
   StyleSheet,
   View,
   Text,
+  ScrollView,
 } from "react-native";
 import { Color, FontSize, Border } from "../contants";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-const Tab = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    
-      <View style={[styles.menuTab, styles.homeLayout]}>
-        <Image
-          style={styles.homeChild}
-          resizeMode="cover"
-          source={require("../../assets/images/menutabBG.png")}
-        />
-        <View style={[styles.home, styles.homeLayout]}>
-          <View style={[styles.rectangleParent, styles.groupChildLayout]}>
-            <View style={[styles.groupChild, styles.groupChildLayout]} />
-            <Text style={styles.home1}>Home</Text>
-            <Image
-              style={styles.iconlucideIcon}
-              resizeMode="cover"
-              source={require("../../assets/images/LucideIcon.png")}
-            />
-          </View>
-        </View>
-        
-        <View style={styles.menuitem}>
-          <View style={[styles.menu, styles.menuPosition]}>
-            <Text style={[styles.menu1, styles.salesTypo]}>MENU</Text>
-            <Image
-              style={[styles.vectorIcon, styles.vectorIconLayout]}
-              resizeMode="cover"
-              source={require("../../assets/images/Vector1.png")}
-            />
-          </View>
-          <View style={styles.khuyenmai}>
-            <Text style={[styles.sales, styles.salesTypo]}>SALES</Text>
-            <Image
-              style={[styles.khuyenmaiChild, styles.iconfeatherIconLayout]}
-              resizeMode="cover"
-              source={require("../../assets/images/Ellipse3.png")}
-            />
-            <Image
-              style={[styles.vectorIcon1, styles.vectorIconLayout]}
-              resizeMode="cover"
-              source={require("../../assets/images/Vector.png")}
-            />
-          </View>
-          <View style={[styles.nHng, styles.nHngLayout]}>
-            <Image
-              style={[styles.iconfeatherIcon, styles.iconfeatherIconLayout]}
-              resizeMode="cover"
-              source={require("../../assets/images/packIcon.png")}
-            />
-            <Text style={[styles.sales1, styles.nHngLayout]}>PACKS</Text>
-          </View>
-          <View style={[styles.profiles, styles.profilesLayout]}>
-            <Image
-              style={[styles.iconfeatherIcon1, styles.iconfeatherIconLayout]}
-              resizeMode="cover"
-              source={require("../../assets/images/FeatherIcon.png")}
-            />
-            <Text style={[styles.profiles1, styles.profilesLayout]}>
-              PROFILES
-            </Text>
-          </View>
+    <View style={[styles.menuTab, styles.homeLayout]}>
+      <Image
+        style={styles.homeChild}
+        resizeMode="cover"
+        source={require("../../assets/images/menutabBG.png")}
+      />
+      <View style={[styles.home, styles.homeLayout]}>
+        <View style={[styles.rectangleParent, styles.groupChildLayout]}>
+          <View style={[styles.groupChild, styles.groupChildLayout]} />
+          <Text style={styles.home1}>Home</Text>
+          <Image
+            style={styles.iconlucideIcon}
+            resizeMode="cover"
+            source={require("../../assets/images/LucideIcon.png")}
+          />
         </View>
       </View>
+
+      <View style={styles.menuitem}>
+        <View style={[styles.menu, styles.menuPosition]}>
+          <Text style={[styles.menu1, styles.salesTypo]}>MENU</Text>
+          <Image
+            style={[styles.vectorIcon, styles.vectorIconLayout]}
+            resizeMode="cover"
+            source={require("../../assets/images/Vector1.png")}
+          />
+        </View>
+        <View style={styles.khuyenmai}>
+          <Text style={[styles.sales, styles.salesTypo]}>SALES</Text>
+          <Image
+            style={[styles.khuyenmaiChild, styles.iconfeatherIconLayout]}
+            resizeMode="cover"
+            source={require("../../assets/images/Ellipse3.png")}
+          />
+          <Image
+            style={[styles.vectorIcon1, styles.vectorIconLayout]}
+            resizeMode="cover"
+            source={require("../../assets/images/Vector.png")}
+          />
+        </View>
+        <View style={[styles.nHng, styles.DatHangLayout]}>
+          <Image
+            style={[styles.iconfeatherIcon, styles.iconfeatherIconLayout]}
+            resizeMode="cover"
+            source={require("../../assets/images/packIcon.png")}
+          />
+          <Text style={[styles.sales1, styles.DatHangLayout]}>PACKS</Text>
+        </View>
+        <View style={[styles.profiles, styles.profilesLayout]}>
+          <Image
+            style={[styles.iconfeatherIcon1, styles.iconfeatherIconLayout]}
+            resizeMode="cover"
+            source={require("../../assets/images/FeatherIcon.png")}
+          />
+          <Text style={[styles.profiles1, styles.profilesLayout]}>
+            PROFILES
+          </Text>
+        </View>
+      </View>
+    </View>
   );
 };
 
@@ -112,7 +109,7 @@ const styles = StyleSheet.create({
     width: 22,
     position: "absolute",
   },
-  nHngLayout: {
+  DatHangLayout: {
     width: 23,
     position: "absolute",
   },
@@ -253,11 +250,11 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   menuTab: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     bottom: 0,
-    
+
     paddingVertical: 10,
     paddingHorizontal: 20,
   },

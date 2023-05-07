@@ -1,4 +1,4 @@
-const WELCOME_CONTENTS = [
+const DATA = [
     {
       image: 'DISCOVER',
       title: 'Discover places near you',
@@ -19,4 +19,4 @@ const WELCOME_CONTENTS = [
     },
   ];
   
-  export default {WELCOME_CONTENTS};
+  export default {DATA};
