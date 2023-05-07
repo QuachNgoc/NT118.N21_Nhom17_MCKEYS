@@ -1,3 +1,3 @@
 import InputWithIcon from './InputWithIcon';
-
-export { InputWithIcon };
+import GoBackBtn from './GoBackBtn';
+export { InputWithIcon, GoBackBtn };
