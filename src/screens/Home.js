@@ -9,7 +9,6 @@ import {
   Dimensions,
   FlatList,
   ScrollView,
-  FlatList,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Top, MenuTab, CardMuaNgay, CardKM } from "../components";

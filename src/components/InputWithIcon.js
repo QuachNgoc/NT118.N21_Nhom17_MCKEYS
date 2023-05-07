@@ -16,6 +16,7 @@ const InputWithIcon = (props) => {
         placeholder={props.placeholder}
         secureTextEntry={!showPassword}
         value={props.state}
+        keyboardType={props.keyboardType}
         onChangeText={(text) => props.setState(text)}
       />
       {props.password && (
