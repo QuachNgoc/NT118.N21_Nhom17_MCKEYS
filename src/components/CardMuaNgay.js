@@ -1,15 +1,17 @@
 import * as React from "react";
 import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { Images, Color, Border, FontSize } from "../contants";
+import { useNavigation } from "@react-navigation/native";
 
-const handlePress = () => {};
 
-const CardMuaNgay = ({ style }) => {
+const CardMuaNgay = () => {
+  const navigation = useNavigation();
+
   return (
-    <View style={[styles.monNgon, styles.monNgonLayout, style]}>
+    <View style={styles.monNgonLayout}>
       <View style={[styles.monNgonChild, styles.childBorder]} />
       <Image
-        style={[styles.monNgonItem, styles.monNgonItemPosition]}
+        style={styles.monNgonItemPosition}
         resizeMode="cover"
         source={Images.SAMPLE_IMG}
       />
@@ -18,7 +20,7 @@ const CardMuaNgay = ({ style }) => {
 
       <TouchableOpacity
         style={styles.buybtnChild}
-        onPress={handlePress}
+        onPress={() => navigation.navigate("DonHangScreen")}
       >
         <Text style={[styles.muaNgay, styles.muaTypo]}>Mua ngay</Text>
       </TouchableOpacity>
@@ -27,15 +29,9 @@ const CardMuaNgay = ({ style }) => {
 };
 const styles = StyleSheet.create({ 
   monNgonLayout: {
-    width: 141,
-    position: "absolute",
-  },
-  monNgonItemPosition: {
-    height: 96,
-    left: 10,
-    top: 13,
-    borderRadius: Border.br_xl,
-    position: "absolute",
+    left: 0,
+    top: 0,
+    marginLeft: 10
   },
   monNgonChild: {
     borderColor: "#fd8d26",
@@ -45,7 +41,6 @@ const styles = StyleSheet.create({
     left: 0,
     top: 0,
     width: 141,
-    position: "absolute",
     height: 237,
   },
   childBorder: {
@@ -54,10 +49,11 @@ const styles = StyleSheet.create({
   },
   monNgonItemPosition: {
     height: 96,
-    left: 10,
+    width: "90%",
+    left: 6,
     top: 13,
     borderRadius: Border.br_xl,
-    position: "absolute",
+    position: "absolute"
   },
   monAnRatNgon: {
     top: 121,
@@ -89,8 +85,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     backgroundColor: Color.orangered_100,
     borderColor: Color.orangered_200,
-    left: "5%",
-    top: "80%",
+    left: 7,
+    top: "76%",
     width: 125,
     position: "absolute",
   },

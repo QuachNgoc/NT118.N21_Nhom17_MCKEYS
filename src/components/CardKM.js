@@ -2,10 +2,11 @@ import * as React from "react";
 import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { Images, Color, Border, FontSize } from "../contants";
 
-
-const handlePress = () => {};
+import { useNavigation } from "@react-navigation/native";
 
 const CardKM = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={[styles.monkhuyenmai, styles.khuyenmaiLayout]}>
       <View style={[styles.monkhuyenmaiChild, styles.khuyenmaiLayout]} />
@@ -21,7 +22,7 @@ const CardKM = () => {
       <View style={[styles.orderbtn, styles.orderbtnLayout]}>
         <TouchableOpacity
           style={[styles.buttonIcon, styles.buttonPosition]}
-          onPress={handlePress}
+          onPress={() => navigation.navigate("DonHangScreen")}
         >
           <Text style={[styles.DatNgay, styles.DatNgayTypo]}>Đặt Ngay</Text>
         </TouchableOpacity>
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.gray_900,
     borderRadius: Border.br_xl,
     left: 0,
-    top: 0,
+    top: -10,
   },
   imgIcon: {
     top: 8,

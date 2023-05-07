@@ -1,16 +1,16 @@
 import * as React from "react";
 import {
-  StyleProp,
-  ViewStyle,
   Image,
   StyleSheet,
   View,
   Text,
-  ScrollView,
+  TouchableOpacity
 } from "react-native";
 import { Color, FontSize, Border } from "../contants";
+import { useNavigation } from "@react-navigation/native";
 
 const MenuTab = () => {
+  const navigation = useNavigation();
   return (
     <View style={[styles.menuTab, styles.homeLayout]}>
       <Image
@@ -18,7 +18,10 @@ const MenuTab = () => {
         resizeMode="cover"
         source={require("../../assets/images/menutabBG.png")}
       />
-      <View style={[styles.home, styles.homeLayout]}>
+      <TouchableOpacity 
+        style={[styles.home, styles.homeLayout]}
+        onPress={() => navigation.navigate("Home")}
+      >
         <View style={[styles.rectangleParent, styles.groupChildLayout]}>
           <View style={[styles.groupChild, styles.groupChildLayout]} />
           <Text style={styles.home1}>Home</Text>
@@ -28,7 +31,7 @@ const MenuTab = () => {
             source={require("../../assets/images/LucideIcon.png")}
           />
         </View>
-      </View>
+      </TouchableOpacity>
 
       <View style={styles.menuitem}>
         <View style={[styles.menu, styles.menuPosition]}>

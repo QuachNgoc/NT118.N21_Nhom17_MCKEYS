@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { LoginScreen, RegisterScreen, SplashScreen, OnBoardingScreen, Home, KhuyenMaiScreen, DoiDiemScreen } from '../screens';
+import { LoginScreen, RegisterScreen, SplashScreen, OnBoardingScreen, Home, KhuyenMaiScreen, DoiDiemScreen, DonHangScreen } from '../screens';
 
 const Stack = createStackNavigator();
 
@@ -8,7 +8,7 @@ const Navigators = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="DoiDiemScreen"
+        initialRouteName="Home"
         screenOptions={{ headerShown: false }}
       >
 
@@ -19,7 +19,7 @@ const Navigators = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="KhuyenMaiScreen" component={KhuyenMaiScreen} />
         <Stack.Screen name="DoiDiemScreen" component={DoiDiemScreen} />
-
+        <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

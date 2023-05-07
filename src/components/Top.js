@@ -9,8 +9,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Images, Color, Border, FontSize } from "../contants";
+import { useNavigation } from "@react-navigation/native";
 
 const Top = () => {
+  const navigation = useNavigation();
+
   return (
     <ImageBackground source={Images.SAMPLE_IMG} style={styles.topPosition}>
       {/* search */}
@@ -47,7 +50,10 @@ const Top = () => {
           <Text style={[styles.ngocQuach, styles.textTypo]}>Ngoc Quach</Text>
         </View>
 
-        <TouchableOpacity style={[styles.tichdiem, styles.tichdiemPosition]}>
+        <TouchableOpacity 
+          style={[styles.tichdiem, styles.tichdiemPosition]}
+          onPress={() => navigation.navigate("DoiDiemScreen")}
+        >
           <Image
             style={[styles.tichdiemChild, styles.buttonPosition]}
             resizeMode="cover"
