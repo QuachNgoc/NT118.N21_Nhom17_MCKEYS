@@ -1,5 +1,7 @@
-import Colors from './Colors';
+import Color from './Color';
 import Images from './Images';
-import WelcomeText from './WelcomeText';
+import Data from './Data';
+import Border from "./Border";
+import FontSize from "./FontSize";
 
-export {Colors, Images, WelcomeText};
+export {Color, Images, Data, Border, FontSize};

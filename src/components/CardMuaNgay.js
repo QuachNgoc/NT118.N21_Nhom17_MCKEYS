@@ -1,0 +1,111 @@
+import * as React from "react";
+import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import { Images, Color, Border, FontSize } from "../contants";
+
+const handlePress = () => {};
+
+const CardMuaNgay = ({ style }) => {
+  return (
+    <View style={[styles.monNgon, styles.monNgonLayout, style]}>
+      <View style={[styles.monNgonChild, styles.childBorder]} />
+      <Image
+        style={[styles.monNgonItem, styles.monNgonItemPosition]}
+        resizeMode="cover"
+        source={Images.SAMPLE_IMG}
+      />
+      <Text style={styles.monAnRatNgon}>Món ăn rất ngon số 1</Text>
+      <Text style={[styles.text, styles.textTypo]}>99.000 đ</Text>
+
+      <TouchableOpacity
+        style={styles.buybtnChild}
+        onPress={handlePress}
+      >
+        <Text style={[styles.muaNgay, styles.muaTypo]}>Mua ngay</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+const styles = StyleSheet.create({ 
+  monNgonLayout: {
+    width: 141,
+    position: "absolute",
+  },
+  monNgonItemPosition: {
+    height: 96,
+    left: 10,
+    top: 13,
+    borderRadius: Border.br_xl,
+    position: "absolute",
+  },
+  monNgonChild: {
+    borderColor: "#fd8d26",
+    backgroundColor: Color.gray_900,
+    borderWidth: 2,
+    borderRadius: Border.br_xl,
+    left: 0,
+    top: 0,
+    width: 141,
+    position: "absolute",
+    height: 237,
+  },
+  childBorder: {
+    borderWidth: 2,
+    borderStyle: "solid",
+  },
+  monNgonItemPosition: {
+    height: 96,
+    left: 10,
+    top: 13,
+    borderRadius: Border.br_xl,
+    position: "absolute",
+  },
+  monAnRatNgon: {
+    top: 121,
+    height: 39,
+    width: 119,
+    textAlign: "center",
+    color: Color.black,
+    fontSize: FontSize.size_smi,
+    left: 11,
+    fontWeight: "700",
+    position: "absolute",
+  },
+  text: {
+    top: 160,
+    color: Color.saddlebrown,
+    width: 119,
+    textAlign: "center",
+    left: 11,
+  },
+  textTypo: {
+    fontSize: FontSize.size_smi,
+    fontWeight: "700",
+    height: 21,
+    position: "absolute",
+  },
+  buybtnChild: {
+    height: 40,
+    borderRadius: Border.br_3xs,
+    borderWidth: 2,
+    backgroundColor: Color.orangered_100,
+    borderColor: Color.orangered_200,
+    left: "5%",
+    top: "80%",
+    width: 125,
+    position: "absolute",
+  },
+  muaNgay: {
+    top: 8,
+    alignItems: "center"
+  },
+  muaTypo: {
+    width: "100%",
+    color: Color.gray_100,
+    textAlign: "center",
+    fontSize: FontSize.size_lg,
+    fontWeight: "700",
+    height: 21,
+    position: "absolute",
+  },
+});
+export default CardMuaNgay;

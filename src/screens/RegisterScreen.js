@@ -6,6 +6,7 @@ import { Display } from '../utils';
 import { Colors, Images } from '../contants';
 import { GoBackBtn, InputWithIcon } from '../components';
 
+
 const RegisterScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: Colors.DEFAULT_GREEN,
+    backgroundColor: Color.DEFAULT_GREEN,
     position: 'relative'
   },
   image: {
@@ -81,10 +82,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 32,
     textTransform: 'uppercase',
-    color: Colors.DEFAULT_WHITE,
+    color: Color.DEFAULT_WHITE,
   },
   button: {
-    backgroundColor: Colors.DEFAULT_YELLOW,
+    backgroundColor: Color.DEFAULT_YELLOW,
     borderRadius: 30,
     paddingHorizontal: 20,
     paddingVertical: 14,

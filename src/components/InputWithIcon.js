@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Colors } from '../contants';
+import { Color } from '../contants';
 
 const InputWithIcon = (props) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,7 +9,7 @@ const InputWithIcon = (props) => {
   return (
     <View style={styles.inputContainer}>
       <View style={styles.iconContainer}>
-        <Icon name={props.icon} size={24} color={Colors.DEFAULT_GREY} />
+        <Icon name={props.icon} size={24} color={Color.DEFAULT_GREY} />
       </View>
       <TextInput
         style={styles.input}
@@ -20,7 +20,7 @@ const InputWithIcon = (props) => {
       />
       {props.password && (
         <TouchableOpacity style={styles.iconEyeContainer} onPress={() => setShowPassword(!showPassword)}>
-          <Icon name={showPassword ? 'eye-slash' : 'eye'} size={24} color={Colors.DEFAULT_GREY} />
+          <Icon name={showPassword ? 'eye-slash' : 'eye'} size={24} color={Color.DEFAULT_GREY} />
         </TouchableOpacity>
       )}
     </View>
@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     height: 55,
-    borderColor: Colors.DEFAULT_GREY,
-    backgroundColor: Colors.DEFAULT_WHITE,
+    borderColor: Color.DEFAULT_GREY,
+    backgroundColor: Color.DEFAULT_WHITE,
     borderRadius: 30,
     paddingHorizontal: 20,
     marginBottom: 16,
