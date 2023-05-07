@@ -1,4 +1,5 @@
 import InputWithIcon from './InputWithIcon';
+import GoBackBtn from './GoBackBtn';
 import Top from "./Top";
 import MenuTab from "./MenuTab";
 import CardMuaNgay from './CardMuaNgay';
@@ -8,4 +9,5 @@ import CardVoucher from './CardVoucher';
 import CardDonHang from './CardDonHang';
 import CardSPGoiY from './CardSPGoiY';
 
-export { InputWithIcon, Top, MenuTab, CardMuaNgay, CardKM, CardDoiDiem, CardVoucher, CardDonHang, CardSPGoiY};
+export { InputWithIcon, GoBackBtn, Top, MenuTab, CardMuaNgay, CardKM, CardDoiDiem, CardVoucher, CardDonHang, CardSPGoiY};
+

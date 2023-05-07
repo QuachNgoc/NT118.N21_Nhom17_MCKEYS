@@ -32,7 +32,6 @@
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-    "undefined": "react-navigation/native",
     "react-native-reanimated": "~2.14.4"
   },
   "devDependencies": {

@@ -7,6 +7,7 @@ import {
   View,
   Pressable,
   Dimensions,
+  FlatList,
   ScrollView,
   FlatList,
 } from "react-native";
