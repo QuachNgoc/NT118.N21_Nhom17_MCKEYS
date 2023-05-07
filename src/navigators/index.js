@@ -8,7 +8,7 @@ const Navigators = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="RegisterScreen"
+        initialRouteName="Home"
         screenOptions={{ headerShown: false }}
       >
 
