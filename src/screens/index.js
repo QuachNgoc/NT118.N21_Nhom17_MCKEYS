@@ -5,8 +5,10 @@ import OnBoardingScreen from './OnBoardingScreen';
 import Home from './Home';
 import KhuyenMaiScreen from './KhuyenMaiScreen';
 import DoiDiemScreen from './DoiDiemScreen';
+import DonHangScreen from './DonHangScreen';
 import ProfileScreen from './ProfileScreen';
 import ProfileEditScreen from './ProfileEditScreen';
+
 export {
   SplashScreen,
   LoginScreen,
@@ -17,4 +19,5 @@ export {
   DoiDiemScreen,
   ProfileScreen,
   ProfileEditScreen,
+  DonHangScreen
 };

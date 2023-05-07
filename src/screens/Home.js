@@ -9,37 +9,26 @@ import {
   Dimensions,
   FlatList,
   ScrollView,
+  FlatList,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Top, MenuTab, CardMuaNgay, CardKM } from "../components";
 import { FontSize, Border, Color } from "../contants";
-import KhuyenMaiScreen from "./KhuyenMaiScreen";
 
 const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "First Item",
   },
   {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Second Item",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    title: "Third Item",
   },
 ];
 
 const Home = () => {
   const navigation = useNavigation();
-  const scrollViewRef = useRef();
-
-  const handleScroll = (event) => {
-    const contentOffset = event.nativeEvent.contentOffset;
-    const viewSize = event.nativeEvent.layoutMeasurement;
-    const pageNum = Math.floor(contentOffset.x / viewSize.width);
-    console.log('Current page:', pageNum + 1);
-  };
 
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>
@@ -56,18 +45,12 @@ const Home = () => {
           </View>
 
           <View style={[styles.listmonan, styles.listmonanLayout]}>
-            
-            <ScrollView
+            <FlatList
+              data={DATA}
               horizontal
-              pagingEnabled
-              showsHorizontalScrollIndicator={false}
-              onScroll={handleScroll}
-              ref={scrollViewRef}
-            >
-              <CardMuaNgay />
-              <CardMuaNgay style={{ marginLeft: 150 }} />
-              <CardMuaNgay style={{ marginLeft: 150 + 150 }} />
-            </ScrollView>
+              renderItem={({ item }) => <CardMuaNgay />}
+              keyExtractor={(item) => item.id}
+            />
           </View>
         </View>
 
@@ -86,7 +69,6 @@ const Home = () => {
             </Pressable>
           </View>
 
-          {/* Sửa thành FlatList */}
           <View style={styles.listmonkm}>
             <FlatList
               data={DATA}
@@ -161,12 +143,11 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   listmonanLayout: {
-    width: 439,
-    position: "absolute",
+    width: "100%",
   },
   listmonan: {
     top: 49,
-    height: 237,
+    height: "90%",
     left: 0,
   },
   groupkhuyenmai: {
@@ -198,7 +179,7 @@ const styles = StyleSheet.create({
   listmonkm: {
     top: 52,
     width: 371,
-    height: 444,
+    height: "100%",
     left: 0,
     position: "absolute",
   },

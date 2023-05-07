@@ -6,5 +6,8 @@ import CardMuaNgay from './CardMuaNgay';
 import CardKM from './CardKM';
 import CardDoiDiem from './CardDoiDiem';
 import CardVoucher from './CardVoucher';
+import CardDonHang from './CardDonHang';
+import CardSPGoiY from './CardSPGoiY';
 
-export { InputWithIcon, GoBackBtn , Top, MenuTab, CardMuaNgay, CardKM, CardDoiDiem, CardVoucher };
+export { InputWithIcon, GoBackBtn, Top, MenuTab, CardMuaNgay, CardKM, CardDoiDiem, CardVoucher, CardDonHang, CardSPGoiY};
+

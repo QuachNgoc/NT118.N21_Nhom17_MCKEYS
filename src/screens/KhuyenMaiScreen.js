@@ -11,7 +11,6 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { Top, MenuTab, CardKM } from "../components";
 import { Color, Border, FontSize } from "../contants";
-import DoiDiemScreen from "../screens/DoiDiemScreen";
 
 const DATA = [
   {

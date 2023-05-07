@@ -11,6 +11,7 @@ import {
   Home,
   KhuyenMaiScreen,
   DoiDiemScreen,
+  DonHangScreen
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -31,6 +32,7 @@ const Navigators = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="KhuyenMaiScreen" component={KhuyenMaiScreen} />
         <Stack.Screen name="DoiDiemScreen" component={DoiDiemScreen} />
+        <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

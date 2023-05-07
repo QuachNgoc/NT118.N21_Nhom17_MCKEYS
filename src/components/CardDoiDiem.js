@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { Images, Color, Border, FontSize } from "../contants";
-
-
-const handlePress = () => {};
+import { useNavigation } from "@react-navigation/native";
 
 
 const CardDoiDiem = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={[styles.monkhuyenmai, styles.khuyenmaiLayout]}>
       <View style={[styles.monkhuyenmaiChild, styles.khuyenmaiLayout]} />
@@ -22,7 +22,7 @@ const CardDoiDiem = () => {
       <View style={[styles.orderbtn, styles.orderbtnLayout]}>
         <TouchableOpacity
           style={[styles.buttonIcon, styles.buttonPosition]}
-          onPress={handlePress}
+          onPress={() => navigation.navigate("DonHangScreen")}
         >
           <Text style={[styles.DatNgay, styles.DatNgayTypo]}>Đổi ngay</Text>
         </TouchableOpacity>
