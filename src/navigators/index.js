@@ -11,7 +11,10 @@ import {
   Home,
   KhuyenMaiScreen,
   DoiDiemScreen,
-  DonHangScreen
+  DonHangScreen,
+  CatetoryScreen,
+  OrderDelivery,
+  Restaurant
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -33,6 +36,9 @@ const Navigators = () => {
         <Stack.Screen name="KhuyenMaiScreen" component={KhuyenMaiScreen} />
         <Stack.Screen name="DoiDiemScreen" component={DoiDiemScreen} />
         <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
+        <Stack.Screen name="CatetoryScreen" component={CatetoryScreen} />
+        <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
+        <Stack.Screen name="Restaurant" component={Restaurant} />
       </Stack.Navigator>
     </NavigationContainer>
   );

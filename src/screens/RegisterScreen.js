@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import React, { useState } from "react";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import Icon from "react-native-vector-icons/Feather";
 
-import { Display } from '../utils';
-import { Color, Images } from '../contants';
-import { GoBackBtn, InputWithIcon } from '../components';
-
+import { Display } from "../utils";
+import { Color, Images } from "../contants";
+import { GoBackBtn, InputWithIcon } from "../components";
+import { useNavigation } from "@react-navigation/native";
 
 const RegisterScreen = ({ navigation }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordConfirm, setPasswordConfirm] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirm, setPasswordConfirm] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleRegister = () => {
     // Handle login logic here
     console.log(
       `Register with username: ${username} and password: ${password}`
     );
+    const navigation = useNavigation();
+    navigation.navigate("LoginScreen");
   };
 
   return (
     <View style={styles.container}>
-      <GoBackBtn 
-        text='Back to login'
-      />
+      <GoBackBtn text="Back to login" />
 
       <Image source={Images.PLATE} resizeMode="contain" style={styles.image} />
 
@@ -67,10 +67,10 @@ const RegisterScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: Color.DEFAULT_GREEN,
-    position: 'relative'
+    position: "relative",
   },
   image: {
     height: Display.setHeight(16),
@@ -79,9 +79,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 32,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
     color: Color.DEFAULT_WHITE,
   },
   button: {
@@ -90,15 +90,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 14,
     marginTop: 10,
-    width: '80%',
+    width: "80%",
   },
   buttonText: {
-    color: '#FFFFFF',
-    fontWeight: 'bold',
+    color: "#FFFFFF",
+    fontWeight: "bold",
     fontSize: 19,
-    textTransform: 'uppercase',
-    textAlign: 'center',
-  }
+    textTransform: "uppercase",
+    textAlign: "center",
+  },
 });
 
 export default RegisterScreen;

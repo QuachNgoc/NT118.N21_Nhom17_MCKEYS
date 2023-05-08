@@ -7,12 +7,13 @@ import {
   Pressable,
   FlatList,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Top, MenuTab, CardDonHang, CardSPGoiY } from "../components";
 import { Color, Border, FontSize } from "../contants";
 import { useState } from "react";
+import GoBackBtn from '../components/GoBackBtn';
 
 const DATA = [
   {
@@ -21,13 +22,12 @@ const DATA = [
   {
     id: "2",
   },
-
 ];
 
 const DonHangScreen = () => {
-
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>
+      
       <View style={styles.homemain}>
         <Text style={[styles.donHang, styles.donHangTypo]}>
           Đơn hàng của tôi
@@ -70,7 +70,9 @@ const DonHangScreen = () => {
         </View>
 
         {/* Đổi thành Touch nha */}
-        <TouchableOpacity style={[styles.thanhtoanbtn, styles.thanhtoanbtnLayout]}>
+        <TouchableOpacity
+          style={[styles.thanhtoanbtn, styles.thanhtoanbtnLayout]}
+        >
           <View style={[styles.thanhtoanbtnChild, styles.childPosition]} />
           <Text style={styles.thanhToan}>Thanh toán</Text>
         </TouchableOpacity>

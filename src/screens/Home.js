@@ -9,21 +9,32 @@ import {
   Dimensions,
   FlatList,
   ScrollView,
-  FlatList,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Top, MenuTab, CardMuaNgay, CardKM } from "../components";
-import { FontSize, Border, Color } from "../contants";
+import { FontSize, Border, Color, Images } from "../contants";
 
 const DATA = [
   {
-    id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+    menuId: 1,
+    name: "Crispy Chicken Burger",
+    photo: Images.crispy_chicken_burger,
+    description: "Burger with crispy chicken, cheese and lettuce",
+    price: "80.000 đ",
   },
   {
-    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    menuId: 2,
+    name: "Burger gà giòn với mù tạt mật ong",
+    photo: Images.honey_mustard_chicken_burger,
+    description: "Burger gà giòn với xà lách trộn mù tạt mật ong",
+    price: "99.000 đ",
   },
   {
-    id: "58694a0f-3da1-471f-bd96-145571e29d72",
+    menuId: 3,
+    name: "Khoai tây chiên giòn",
+    photo: Images.baked_fries,
+    description: "Khoai tây chiên giòn",
+    price: "90.000 đ",
   },
 ];
 
@@ -48,8 +59,8 @@ const Home = () => {
             <FlatList
               data={DATA}
               horizontal
-              renderItem={({ item }) => <CardMuaNgay />}
-              keyExtractor={(item) => item.id}
+              renderItem={({ item }) => <CardMuaNgay/>}
+              keyExtractor={(item) => item.menuId}
             />
           </View>
         </View>
