@@ -69,11 +69,15 @@ const MenuTab = () => {
           />
           <Text style={[styles.sales1, styles.DatHangLayout]}>PACKS</Text>
         </View>
+<<<<<<< HEAD
 
         <TouchableOpacity 
           style={[styles.profiles, styles.profilesLayout]}
           onPress={() => navigation.navigate("ProfileScreen")}
         >
+=======
+        <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen')} style={[styles.profiles, styles.profilesLayout]}>
+>>>>>>> 5020c8cfc53ea019eecf6c50f667ee49b4853a3f
           <Image
             style={[styles.iconfeatherIcon1, styles.iconfeatherIconLayout]}
             resizeMode="cover"
