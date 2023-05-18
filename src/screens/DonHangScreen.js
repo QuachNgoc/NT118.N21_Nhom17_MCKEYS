@@ -11,16 +11,32 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Top, MenuTab, CardDonHang, CardSPGoiY } from "../components";
-import { Color, Border, FontSize } from "../contants";
+import { Color, Border, FontSize, Images } from "../contants";
 import { useState } from "react";
 import GoBackBtn from '../components/GoBackBtn';
 
 const DATA = [
   {
     id: "1",
+    name: "Crispy Chicken Burger",
+    photo: Images.crispy_chicken_burger,
+    description: "Burger with crispy chicken, cheese and lettuce",
+    price: "80.000 đ",
+    isDiscounted: true,
+    discounted_price: "67.000 đ",
+    freeship: true,
+    shipPrice: "15.000 đ",
   },
   {
     id: "2",
+    name: "Burger gà giòn với mù tạt mật ong",
+    photo: Images.honey_mustard_chicken_burger,
+    description: "Burger gà giòn với xà lách trộn mù tạt mật ong",
+    price: "99.000 đ",
+    isDiscounted: true,
+    discounted_price: "67.000 đ",
+    freeship: true,
+    shipPrice: "15.000 đ",
   },
 ];
 
@@ -90,7 +106,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   homemain: {
-    backgroundColor: Color.chocolate,
+    backgroundColor: "rgba(211, 118, 0, 0.8)",
     flex: 1,
     height: "100%",
     overflow: "hidden",

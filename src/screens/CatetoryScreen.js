@@ -16,7 +16,7 @@ const CatetoryScreen = ({ navigation }) => {
     // Dummy Datas
 
     const initialCurrentLocation = {
-        streetName: "Current Location",
+        streetName: "Địa chỉ hiện tại",
         gps: {
             latitude: 10.846240,
             longitude: 106.769119
@@ -26,12 +26,12 @@ const CatetoryScreen = ({ navigation }) => {
     const categoryData = [
         {
             id: 1,
-            name: "Rice",
+            name: "Cơm",
             icon: Icon.rice_bowl,
         },
         {
             id: 2,
-            name: "Noodles",
+            name: "Mì",
             icon: Icon.noodle,
         },
         {
@@ -56,7 +56,7 @@ const CatetoryScreen = ({ navigation }) => {
         },
         {
             id: 7,
-            name: "Snacks",
+            name: "Ăn Vặt",
             icon: Icon.fries,
         },
         {
@@ -66,12 +66,12 @@ const CatetoryScreen = ({ navigation }) => {
         },
         {
             id: 9,
-            name: "Desserts",
+            name: "Tráng miệng",
             icon: Icon.donut,
         },
         {
             id: 10,
-            name: "Drinks",
+            name: "Đồ uống",
             icon: Icon.drink,
         },
 
@@ -104,9 +104,9 @@ const CatetoryScreen = ({ navigation }) => {
                     menuId: 1,
                     name: "Crispy Chicken Burger",
                     photo: Images.crispy_chicken_burger,
-                    description: "Burger with crispy chicken, cheese and lettuce",
+                    description: "Burger với gà, phô mai, ít rau trộn",
                     calories: 200,
-                    price: 10
+                    price: 100000
                 },
                 {
                     menuId: 2,
@@ -114,7 +114,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.honey_mustard_chicken_burger,
                     description: "Burger gà giòn với xà lách trộn mù tạt mật ong",
                     calories: 250,
-                    price: 15
+                    price: 150000
                 },
                 {
                     menuId: 3,
@@ -122,7 +122,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.baked_fries,
                     description: "Khoai tây chiên giòn",
                     calories: 194,
-                    price: 8
+                    price: 80000
                 }
             ]
         },
@@ -149,7 +149,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.hawaiian_pizza,
                     description: "Thịt xông khói Canada, đế pizza nhà làm, sốt pizza",
                     calories: 250,
-                    price: 15
+                    price: 150000
                 },
                 {
                     menuId: 5,
@@ -157,7 +157,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.pizza,
                     description: "Cà chua tươi, húng quế thơm và bocconcini nấu chảy",
                     calories: 250,
-                    price: 20
+                    price: 200000
                 },
                 {
                     menuId: 6,
@@ -165,7 +165,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.tomato_pasta,
                     description: "Pasta với cà chua tươi",
                     calories: 100,
-                    price: 10
+                    price: 100000
                 },
                 {
                     menuId: 7,
@@ -173,7 +173,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.salad,
                     description: "Xà lách, cà chua, dưa leo thái nhỏ",
                     calories: 100,
-                    price: 10
+                    price: 100000
                 }
             ]
         },
@@ -200,7 +200,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.chicago_hot_dog,
                     description: "Cà chua tươi, tất cả xúc xích bò",
                     calories: 100,
-                    price: 20
+                    price: 200000
                 }
             ]
         },
@@ -227,13 +227,13 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.sushi,
                     description: "Cá hồi tươi, cơm sushi, bơ tươi ngon ngọt",
                     calories: 100,
-                    price: 50
+                    price: 50000
                 }
             ]
         },
         {
             id: 5,
-            name: "MCKEYS Cuisine",
+            name: "MCKEYS ẩm thực",
             rating: 4.8,
             categories: [1, 2],
             priceRating: affordable,
@@ -254,7 +254,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.kolo_mee,
                     description: "mì xá xíu",
                     calories: 200,
-                    price: 5
+                    price: 50000
                 },
                 {
                     menuId: 11,
@@ -262,7 +262,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.sarawak_laksa,
                     description: "Bún, tôm nấu",
                     calories: 300,
-                    price: 8
+                    price: 80000
                 },
                 {
                     menuId: 12,
@@ -270,15 +270,15 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.nasi_lemak,
                     description: "Một món cơm truyền thống của người Mã Lai",
                     calories: 300,
-                    price: 8
+                    price: 80000
                 },
                 {
                     menuId: 13,
-                    name: "Nasi Briyani with Mutton",
+                    name: "Nasi Briyani với Mutton",
                     photo: Images.nasi_briyani_mutton,
                     description: "Món cơm Ấn Độ truyền thống với thịt cừu",
                     calories: 300,
-                    price: 8
+                    price: 80000
                 },
 
             ]
@@ -307,7 +307,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.teh_c_peng,
                     description: "Ba lớp Teh C Peng",
                     calories: 100,
-                    price: 2
+                    price: 20000
                 },
                 {
                     menuId: 13,
@@ -315,7 +315,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.ice_kacang,
                     description: "Đá bào đậu đỏ",
                     calories: 100,
-                    price: 3
+                    price: 30000
                 },
                 {
                     menuId: 14,
@@ -323,7 +323,7 @@ const CatetoryScreen = ({ navigation }) => {
                     photo: Images.kek_lapis,
                     description: "bánh nhiều lớp",
                     calories: 300,
-                    price: 20
+                    price: 20000
                 }
             ]
 
@@ -571,7 +571,7 @@ const CatetoryScreen = ({ navigation }) => {
                                         ...FontSize.body3,
                                         color: (priceRating <= item.priceRating) ? Color.black : Color.darkgray
                                     }}
-                                >$</Text>
+                                >đ</Text>
                             ))
                         }
                     </View>

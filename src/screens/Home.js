@@ -38,6 +38,33 @@ const DATA = [
   },
 ];
 
+const DATAKM = [
+  {
+    menuId: 1,
+    name: "Hawaiian Pizza",
+    photo: Images.hawaiian_pizza,
+    description: "Thịt xông khói Canada, đế pizza nhà làm, sốt pizza",
+    cur_price: "155.000 đ",
+    //discounted_price: "125.000 đ"
+  },
+  {
+    menuId: 2,
+    name: "Kolo Mee",
+    photo: Images.kolo_mee,
+    description: "Mì xá xíu",
+    cur_price: "55.000 đ",
+    //discounted_price: "35.000 đ"
+  },
+  {
+    menuId: 3,
+    name: "Khoai tây chiên giòn",
+    photo: Images.baked_fries,
+    description: "Khoai tây chiên giòn",
+    cur_price: "90.000 đ",
+    //discounted_price: "75.000 đ"
+  },
+];
+
 const Home = () => {
   const navigation = useNavigation();
 
@@ -59,7 +86,7 @@ const Home = () => {
             <FlatList
               data={DATA}
               horizontal
-              renderItem={({ item }) => <CardMuaNgay/>}
+              renderItem={({ item }) => <CardMuaNgay props={item}/>}
               keyExtractor={(item) => item.menuId}
             />
           </View>
@@ -82,8 +109,8 @@ const Home = () => {
 
           <View style={styles.listmonkm}>
             <FlatList
-              data={DATA}
-              renderItem={({ item }) => <CardKM />}
+              data={DATAKM}
+              renderItem={({ item }) => <CardKM  props={item}/>}
               keyExtractor={(item) => item.id}
             />
           </View>
@@ -101,7 +128,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   homemain: {
-    backgroundColor: Color.chocolate,
+    backgroundColor: "rgba(211, 118, 0, 0.8)",
     flex: 1,
     height: 1340,
     overflow: "hidden",

@@ -47,7 +47,7 @@ const MenuTab = () => {
           />
         </TouchableOpacity>
 
-        <View style={styles.khuyenmai}>
+        <TouchableOpacity style={styles.khuyenmai}>
           <Text style={[styles.sales, styles.salesTypo]}>SALES</Text>
           <Image
             style={[styles.khuyenmaiChild, styles.iconfeatherIconLayout]}
@@ -59,25 +59,21 @@ const MenuTab = () => {
             resizeMode="cover"
             source={require("../../assets/images/Vector.png")}
           />
-        </View>
+        </TouchableOpacity>
 
-        <View style={[styles.nHng, styles.DatHangLayout]}>
+        <TouchableOpacity style={[styles.nHng, styles.DatHangLayout]}>
           <Image
             style={[styles.iconfeatherIcon, styles.iconfeatherIconLayout]}
             resizeMode="cover"
             source={require("../../assets/images/packIcon.png")}
           />
           <Text style={[styles.sales1, styles.DatHangLayout]}>PACKS</Text>
-        </View>
-<<<<<<< HEAD
+        </TouchableOpacity>
 
         <TouchableOpacity 
           style={[styles.profiles, styles.profilesLayout]}
           onPress={() => navigation.navigate("ProfileScreen")}
         >
-=======
-        <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen')} style={[styles.profiles, styles.profilesLayout]}>
->>>>>>> 5020c8cfc53ea019eecf6c50f667ee49b4853a3f
           <Image
             style={[styles.iconfeatherIcon1, styles.iconfeatherIconLayout]}
             resizeMode="cover"

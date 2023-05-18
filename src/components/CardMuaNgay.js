@@ -3,7 +3,7 @@ import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { Images, Color, Border, FontSize } from "../contants";
 import { useNavigation } from "@react-navigation/native";
 
-const CardMuaNgay = (props) => {
+const CardMuaNgay = ({props}) => {
   const navigation = useNavigation();
 
   return (
@@ -19,7 +19,7 @@ const CardMuaNgay = (props) => {
 
       <TouchableOpacity
         style={styles.buybtnChild}
-        onPress={() => navigation.navigate("DonHangScreen")}
+        onPress={() => navigation.navigate("CatoryScreen")}
       >
         <Text style={[styles.muaNgay, styles.muaTypo]}>Mua ngay</Text>
       </TouchableOpacity>

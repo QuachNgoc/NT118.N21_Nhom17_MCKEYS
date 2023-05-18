@@ -301,7 +301,7 @@ const OrderDelivery = ({ route, navigation }) => {
                             }}
                             onPress={() => navigation.navigate("CatetoryScreen")}
                         >
-                            <Text style={{ ...FontSize.h4, color: Color.white }}>Call</Text>
+                            <Text style={{ ...FontSize.h4, color: Color.white }}>Đặt</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
@@ -315,7 +315,7 @@ const OrderDelivery = ({ route, navigation }) => {
                             }}
                             onPress={() => navigation.goBack()}
                         >
-                            <Text style={{ ...FontSize.h4, color: Color.white }}>Cancel</Text>
+                            <Text style={{ ...FontSize.h4, color: Color.white }}>Bỏ qua</Text>
                         </TouchableOpacity>
                     </View>
 

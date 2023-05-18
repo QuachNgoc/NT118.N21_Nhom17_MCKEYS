@@ -341,8 +341,8 @@ const Restaurant = ({ route, navigation }) => {
                             borderBottomWidth: 1
                         }}
                     >
-                        <Text style={{ ...FontSize.h3 }}>{getBasketItemCount()} items in Cart</Text>
-                        <Text style={{ ...FontSize.h3 }}>${sumOrder()}</Text>
+                        <Text style={{ ...FontSize.h3 }}>{getBasketItemCount()} Trong giỏ hàng</Text>
+                        <Text style={{ ...FontSize.h3 }}>{sumOrder()}đ</Text>
                     </View>
 
                     <View
@@ -363,7 +363,7 @@ const Restaurant = ({ route, navigation }) => {
                                     tintColor: Color.darkgray
                                 }}
                             />
-                            <Text style={{ marginLeft: FontSize.padding, ...FontSize.h4 }}>Location</Text>
+                            <Text style={{ marginLeft: FontSize.padding, ...FontSize.h4 }}>Địa chỉ</Text>
                         </View>
 
                         <View style={{ flexDirection: 'row' }}>
@@ -376,7 +376,7 @@ const Restaurant = ({ route, navigation }) => {
                                     tintColor: Color.darkgray
                                 }}
                             />
-                            <Text style={{ marginLeft: FontSize.padding, ...FontSize.h4 }}>8888</Text>
+                            <Text style={{ marginLeft: FontSize.padding, ...FontSize.h4 }}>...</Text>
                         </View>
                     </View>
 
@@ -401,7 +401,7 @@ const Restaurant = ({ route, navigation }) => {
                                 currentLocation: currentLocation
                             })}
                         >
-                            <Text style={{ color: Color.white, ...FontSize.h2 }}>Order</Text>
+                            <Text style={{ color: Color.white, ...FontSize.h2 }}>Đặt hàng</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

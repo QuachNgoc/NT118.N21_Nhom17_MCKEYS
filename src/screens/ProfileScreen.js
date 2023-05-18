@@ -124,11 +124,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 60,
     paddingBottom: 100,
-<<<<<<< HEAD
     backgroundColor: Color.orangered_200,
-=======
-    backgroundColor: Color.DEFAULT_YELLOW,
->>>>>>> 5020c8cfc53ea019eecf6c50f667ee49b4853a3f
     width: '100%',
     position: 'relative',
     marginBottom: 60,
