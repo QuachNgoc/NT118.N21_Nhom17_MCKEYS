@@ -53,6 +53,7 @@ const KhuyenMaiScreen = () => {
               renderItem={({ item }) => <CardKM />}
               keyExtractor={(item) => item.id}
             />
+            {DATA.map(item => <CardKM key={item.id} />)}
           </View>
         </View>
         <MenuTab />

@@ -22,7 +22,7 @@ const ProfileEditScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <GoBackBtn navigation={navigation} text="Back" />
+      <GoBackBtn text="Quay lại" />
 
       <Text style={styles.title}>Hồ sơ</Text>
 
@@ -64,7 +64,6 @@ const ProfileEditScreen = ({ navigation }) => {
       <TouchableOpacity onPress={handleUpdate} style={styles.btn}>
         <Text style={styles.btnText}>CẬP NHẬT THÔNG TIN</Text>
       </TouchableOpacity>
-
 
       <MenuTab />
     </SafeAreaView>

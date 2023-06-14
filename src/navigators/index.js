@@ -11,7 +11,9 @@ import {
   Home,
   KhuyenMaiScreen,
   DoiDiemScreen,
-  DonHangScreen
+  DonHangScreen,
+  OrderHistoryScreen,
+  ProductDetailScreen
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -20,7 +22,7 @@ const Navigators = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="LoginScreen"
+        initialRouteName="ProductDetailScreen"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
@@ -33,6 +35,8 @@ const Navigators = () => {
         <Stack.Screen name="KhuyenMaiScreen" component={KhuyenMaiScreen} />
         <Stack.Screen name="DoiDiemScreen" component={DoiDiemScreen} />
         <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
+        <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} />
+        <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

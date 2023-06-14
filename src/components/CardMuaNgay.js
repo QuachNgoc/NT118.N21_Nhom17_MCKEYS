@@ -20,7 +20,7 @@ const CardMuaNgay = () => {
 
       <TouchableOpacity
         style={styles.buybtnChild}
-        onPress={() => navigation.navigate("DonHangScreen")}
+        onPress={() => navigation.push("DonHangScreen")}
       >
         <Text style={[styles.muaNgay, styles.muaTypo]}>Mua ngay</Text>
       </TouchableOpacity>
