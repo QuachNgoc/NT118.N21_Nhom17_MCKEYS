@@ -1,43 +1,53 @@
 import * as React from 'react';
 import {
-   Image,
-   StyleSheet,
-   Text,
-   View,
-   Pressable,
-   FlatList,
-   ScrollView,
-   TouchableOpacity,
-} from 'react-native';
-import {
-   Top,
-   MenuTab,
-   CardDonHang,
-   CardSPGoiY,
-   GoBackBtn,
-} from '../components';
-import { Color, Border, FontSize } from '../contants';
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  Pressable,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Top, MenuTab, CardDonHang, CardSPGoiY } from "../components";
+import { Color, Border, FontSize, Images } from "../contants";
+import { useState } from "react";
+import GoBackBtn from '../components/GoBackBtn';
 
 const DATA = [
-   {
-      id: '1',
-   },
-   {
-      id: '2',
-   },
+  {
+    id: "1",
+    name: "Crispy Chicken Burger",
+    photo: Images.crispy_chicken_burger,
+    description: "Burger with crispy chicken, cheese and lettuce",
+    price: "80.000 đ",
+    isDiscounted: true,
+    discounted_price: "67.000 đ",
+    freeship: true,
+    shipPrice: "15.000 đ",
+  },
+  {
+    id: "2",
+    name: "Burger gà giòn với mù tạt mật ong",
+    photo: Images.honey_mustard_chicken_burger,
+    description: "Burger gà giòn với xà lách trộn mù tạt mật ong",
+    price: "99.000 đ",
+    isDiscounted: true,
+    discounted_price: "67.000 đ",
+    freeship: true,
+    shipPrice: "15.000 đ",
+  },
 ];
 
-const DonHangScreen = ({ navigation }) => {
-   return (
-      <ScrollView contentContainerStyle={styles.scrollView}>
-         <View style={styles.homemain}>
-            <GoBackBtn
-               text="Quay lại"
-            />
-            <Text style={[styles.donHang, styles.donHangTypo]}>
-               Đơn hàng của tôi
-            </Text>
-
+const DonHangScreen = () => {
+  return (
+    <ScrollView contentContainerStyle={styles.scrollView}>
+      
+      <View style={styles.homemain}>
+        <Text style={[styles.donHang, styles.donHangTypo]}>
+          Đơn hàng của tôi
+        </Text>
             <View style={styles.donhanglist}>
                {/* <FlatList
             data={DATA}
@@ -91,6 +101,7 @@ const DonHangScreen = ({ navigation }) => {
                <View style={[styles.thanhtoanbtnChild, styles.childPosition]} />
                <Text style={styles.thanhToan}>Thanh toán</Text>
             </TouchableOpacity>
+
 
             <MenuTab />
          </View>
@@ -290,6 +301,7 @@ const styles = StyleSheet.create({
       fontSize: FontSize.size_base,
       position: 'absolute',
    },
+
 });
 
 export default DonHangScreen;

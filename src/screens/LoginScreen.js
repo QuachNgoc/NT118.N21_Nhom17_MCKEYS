@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 
-import { Color, Images } from '../contants';
-import { Display } from '../utils';
-import { InputWithIcon } from '../components';
+import { Color, Images } from "../contants";
+import { Display } from "../utils";
+import { InputWithIcon } from "../components";
+import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen = ({ navigation }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     // Handle login logic here
     console.log(
       `Logging in with username: ${username} and password: ${password}`
     );
+    const navigation = useNavigation();
+    navigation.navigate("Home");
   };
 
-  const handleGoogleLogin = () => {
-
-  };
+  const handleGoogleLogin = () => {};
 
   return (
     <View style={styles.container}>
@@ -47,6 +48,7 @@ const LoginScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.register}
         onPress={() => navigation.push('RegisterScreen')}
+
       >
         <Text style={styles.registerText}>
           Haven't had account yet? Register now
@@ -56,7 +58,11 @@ const LoginScreen = ({ navigation }) => {
       <Text style={styles.divider}>OR</Text>
 
       <TouchableOpacity style={styles.googleBtn} onPress={handleGoogleLogin}>
-        <Image source={Images.GOOGLE_ICON} resizeMode="contain" style={styles.imageGoogle}/>
+        <Image
+          source={Images.GOOGLE_ICON}
+          resizeMode="contain"
+          style={styles.imageGoogle}
+        />
         <Text style={styles.googleBtnText}>Login with Google</Text>
       </TouchableOpacity>
     </View>
@@ -66,8 +72,8 @@ const LoginScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: Color.DEFAULT_GREEN,
   },
   image: {
@@ -77,9 +83,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 32,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
     color: Color.DEFAULT_WHITE,
   },
   button: {
@@ -88,21 +94,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 14,
     marginTop: 10,
-    width: '80%',
+    width: "80%",
   },
   buttonText: {
-    color: '#FFFFFF',
-    fontWeight: 'bold',
+    color: "#FFFFFF",
+    fontWeight: "bold",
     fontSize: 19,
-    textTransform: 'uppercase',
-    textAlign: 'center',
+    textTransform: "uppercase",
+    textAlign: "center",
   },
   divider: {
     color: Color.DEFAULT_WHITE,
     fontWeight: 500,
     fontSize: 20,
     paddingVertical: 20,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   register: {
     paddingHorizontal: 10,
@@ -111,26 +117,26 @@ const styles = StyleSheet.create({
   registerText: {
     color: Color.LIGHT_GREEN,
     fontSize: 18,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
   },
   googleBtn: {
-    flexDirection: 'row',
-    width: '80%',
+    flexDirection: "row",
+    width: "80%",
     backgroundColor: Color.DEFAULT_WHITE,
     height: 55,
     borderRadius: 30,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center",
   },
   googleBtnText: {
     color: Color.DEFAULT_BLACK,
     fontSize: 19,
-     marginLeft: 12
+    marginLeft: 12,
   },
   imageGoogle: {
     height: Display.setHeight(6),
     width: Display.setWidth(6),
-  }
+  },
 });
 
 export default LoginScreen;

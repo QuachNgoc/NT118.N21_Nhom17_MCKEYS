@@ -3,8 +3,7 @@ import { Image, Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import { Images, Color, Border, FontSize } from "../contants";
 import { useNavigation } from "@react-navigation/native";
 
-
-const CardMuaNgay = () => {
+const CardMuaNgay = ({props}) => {
   const navigation = useNavigation();
 
   return (
@@ -13,10 +12,10 @@ const CardMuaNgay = () => {
       <Image
         style={styles.monNgonItemPosition}
         resizeMode="cover"
-        source={Images.SAMPLE_IMG}
+        source={props.photo}
       />
-      <Text style={styles.monAnRatNgon}>Món ăn rất ngon số 1</Text>
-      <Text style={[styles.text, styles.textTypo]}>99.000 đ</Text>
+      <Text style={styles.monAnRatNgon}>{props.name}</Text>
+      <Text style={[styles.text, styles.textTypo]}>{props.price}</Text>
 
       <TouchableOpacity
         style={styles.buybtnChild}

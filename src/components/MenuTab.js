@@ -34,15 +34,20 @@ const MenuTab = () => {
       </TouchableOpacity>
 
       <View style={styles.menuitem}>
-        <View style={[styles.menu, styles.menuPosition]}>
+
+        <TouchableOpacity 
+          style={[styles.menu, styles.menuPosition]}
+          onPress={() => navigation.navigate("CatetoryScreen")}
+        >
           <Text style={[styles.menu1, styles.salesTypo]}>MENU</Text>
           <Image
             style={[styles.vectorIcon, styles.vectorIconLayout]}
             resizeMode="cover"
             source={require("../../assets/images/Vector1.png")}
           />
-        </View>
-        <View style={styles.khuyenmai}>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.khuyenmai}>
           <Text style={[styles.sales, styles.salesTypo]}>SALES</Text>
           <Image
             style={[styles.khuyenmaiChild, styles.iconfeatherIconLayout]}
@@ -54,16 +59,21 @@ const MenuTab = () => {
             resizeMode="cover"
             source={require("../../assets/images/Vector.png")}
           />
-        </View>
-        <View style={[styles.nHng, styles.DatHangLayout]}>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.nHng, styles.DatHangLayout]}>
           <Image
             style={[styles.iconfeatherIcon, styles.iconfeatherIconLayout]}
             resizeMode="cover"
             source={require("../../assets/images/packIcon.png")}
           />
           <Text style={[styles.sales1, styles.DatHangLayout]}>PACKS</Text>
-        </View>
-        <TouchableOpacity onPress={()=> navigation.navigate('ProfileScreen')} style={[styles.profiles, styles.profilesLayout]}>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={[styles.profiles, styles.profilesLayout]}
+          onPress={() => navigation.navigate("ProfileScreen")}
+        >
           <Image
             style={[styles.iconfeatherIcon1, styles.iconfeatherIconLayout]}
             resizeMode="cover"

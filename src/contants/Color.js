@@ -22,6 +22,7 @@ export default {
   DARK_THREE: "#404040",
   DARK_FOUR: "#282828",
   DARK_FIVE: "#B3B3B3",
+
   white: "#fff",
   orangered_100: "#f96900",
   orangered_200: "rgba(249, 105, 0, 0.84)",
@@ -45,6 +46,7 @@ export default {
   gray_700: "rgba(0, 0, 0, 0.4)",
   gray_800: "rgba(255, 255, 255, 0.4)",
   gray_900: "rgba(255, 255, 255, 0.28)",
+
   saddlebrown: "#a04d00",
   lightgray: "#ccc",
   whitesmoke_100: "#f1f1f1",
@@ -52,4 +54,13 @@ export default {
   darkgray: "#aaa",
   dimgray_100: "#676767",
   dimgray_200: "#666",
+  
+  lightGray: "#F5F5F6",
+  lightGray2: "#F6F6F7",
+  lightGray3: "#EFEFF1",
+  lightGray4: "#F8F8F9",
+  transparent: "transparent",
+  darkgray: '#898C95',
+  primary: "#FC6D3F", // orange
+  secondary: "#CDCDD2",   // gray
 };

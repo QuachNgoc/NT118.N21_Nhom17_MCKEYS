@@ -42,7 +42,7 @@ const ProfileScreen = ({ navigation }) => {
           style={styles.goBackBtn}
         />
 
-        <Text style={styles.title}>Hồ sơ</Text>
+        <Text style={styles.title}>Profile</Text>
 
         <View style={styles.userContainer}>
           <TouchableOpacity
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 60,
     paddingBottom: 100,
-    backgroundColor: Color.DEFAULT_YELLOW,
+    backgroundColor: Color.orangered_200,
     width: '100%',
     position: 'relative',
     marginBottom: 60,

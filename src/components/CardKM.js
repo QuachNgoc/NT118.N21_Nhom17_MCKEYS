@@ -4,7 +4,7 @@ import { Images, Color, Border, FontSize } from "../contants";
 
 import { useNavigation } from "@react-navigation/native";
 
-const CardKM = () => {
+const CardKM = ({props}) => {
   const navigation = useNavigation();
 
   return (
@@ -13,16 +13,17 @@ const CardKM = () => {
       <Image
         style={[styles.imgIcon, styles.monNgonLayout]}
         resizeMode="cover"
-        source={Images.SAMPLE_IMG}
+        source={props.photo}
       />
       <Text style={[styles.comboMonKhuyenMai, styles.giaTypo]}>
-        Combo món khuyến mãi số 1
+        {props.name}
       </Text>
-      <Text style={[styles.gia, styles.giaLayout]}>999.000đ</Text>
+      <Text style={[styles.gia, styles.giaLayout]}>{props.cur_price}</Text>
+      <Text style={[styles.Discountgia, styles.DiscountgiaLayout]}>{props.discounted_price}</Text>
       <View style={[styles.orderbtn, styles.orderbtnLayout]}>
         <TouchableOpacity
           style={[styles.buttonIcon, styles.buttonPosition]}
-          onPress={() => navigation.navigate("DonHangScreen")}
+          onPress={() => navigation.navigate("CatoryScreen")}
         >
           <Text style={[styles.DatNgay, styles.DatNgayTypo]}>Đặt Ngay</Text>
         </TouchableOpacity>

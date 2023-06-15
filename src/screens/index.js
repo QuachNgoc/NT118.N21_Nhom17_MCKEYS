@@ -8,8 +8,13 @@ import DoiDiemScreen from './DoiDiemScreen';
 import DonHangScreen from './DonHangScreen';
 import ProfileScreen from './ProfileScreen';
 import ProfileEditScreen from './ProfileEditScreen';
+
 import OrderHistoryScreen from './OrderHistoryScreen';
 import ProductDetailScreen from './ProductDetailScreen';
+import CatetoryScreen from './CatetoryScreen';
+import OrderDelivery from './OrderDelivery';
+import Restaurant from './Restaurant';
+
 
 export {
   SplashScreen,
@@ -24,4 +29,7 @@ export {
   DonHangScreen,
   OrderHistoryScreen,
   ProductDetailScreen
+  CatetoryScreen,
+  OrderDelivery,
+  Restaurant
 };

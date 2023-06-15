@@ -14,6 +14,10 @@ import {
   DonHangScreen,
   OrderHistoryScreen,
   ProductDetailScreen
+
+  CatetoryScreen,
+  OrderDelivery,
+  Restaurant
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -37,6 +41,9 @@ const Navigators = () => {
         <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
         <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} />
         <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} />
+        <Stack.Screen name="CatetoryScreen" component={CatetoryScreen} />
+        <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
+        <Stack.Screen name="Restaurant" component={Restaurant} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -10,20 +10,61 @@ import {
   SafeAreaView,
   FlatList,
   ScrollView,
-} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { Top, MenuTab, CardMuaNgay, CardKM } from '../components';
-import { FontSize, Border, Color } from '../contants';
+
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Top, MenuTab, CardMuaNgay, CardKM } from "../components";
+import { FontSize, Border, Color, Images } from "../contants";
 
 const DATA = [
   {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    menuId: 1,
+    name: "Crispy Chicken Burger",
+    photo: Images.crispy_chicken_burger,
+    description: "Burger with crispy chicken, cheese and lettuce",
+    price: "80.000 đ",
   },
   {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    menuId: 2,
+    name: "Burger gà giòn với mù tạt mật ong",
+    photo: Images.honey_mustard_chicken_burger,
+    description: "Burger gà giòn với xà lách trộn mù tạt mật ong",
+    price: "99.000 đ",
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    menuId: 3,
+    name: "Khoai tây chiên giòn",
+    photo: Images.baked_fries,
+    description: "Khoai tây chiên giòn",
+    price: "90.000 đ",
+  },
+];
+
+const DATAKM = [
+  {
+    menuId: 1,
+    name: "Hawaiian Pizza",
+    photo: Images.hawaiian_pizza,
+    description: "Thịt xông khói Canada, đế pizza nhà làm, sốt pizza",
+    cur_price: "155.000 đ",
+    //discounted_price: "125.000 đ"
+  },
+  {
+    menuId: 2,
+    name: "Kolo Mee",
+    photo: Images.kolo_mee,
+    description: "Mì xá xíu",
+    cur_price: "55.000 đ",
+    //discounted_price: "35.000 đ"
+  },
+  {
+    menuId: 3,
+    name: "Khoai tây chiên giòn",
+    photo: Images.baked_fries,
+    description: "Khoai tây chiên giòn",
+    cur_price: "90.000 đ",
+    //discounted_price: "75.000 đ"
+
   },
 ];
 
@@ -40,6 +81,28 @@ const Home = () => {
               <Text style={[styles.monNgonPhaiThu, styles.xemTypo]}>
                 Món ngon phải thử
               </Text>
+
+
+          <View style={[styles.listmonan, styles.listmonanLayout]}>
+            <FlatList
+              data={DATA}
+              horizontal
+              renderItem={({ item }) => <CardMuaNgay props={item}/>}
+              keyExtractor={(item) => item.menuId}
+            />
+          </View>
+        </View>
+
+        <View style={styles.groupkhuyenmai}>
+          <View style={[styles.khuyenmaitext, styles.orderbtnLayout]}>
+            <Text style={[styles.khuyenmaiSp, styles.xemTypo]}>
+              Khuyến mãi sập sàn
+            </Text>
+            <Pressable
+              style={styles.xemtatcaContainer}
+              onPress={() => navigation.navigate("KhuyenMaiScreen")}
+            >
+
               <Text
                 style={[styles.xemtatca, styles.xemTypo]}
               >{`Xem tất cả >>>`}</Text>
@@ -80,6 +143,7 @@ const Home = () => {
                 <CardKM key={item.id}/>
               ))}
             </View>
+
           </View>
         </View>
       </ScrollView>
@@ -94,7 +158,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   homemain: {
-    backgroundColor: Color.chocolate,
+    backgroundColor: "rgba(211, 118, 0, 0.8)",
     flex: 1,
     height: 1340,
     overflow: 'hidden',

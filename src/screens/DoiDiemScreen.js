@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   homemain: {
-    backgroundColor: Color.chocolate,
+    backgroundColor: "rgba(211, 118, 0, 0.8)",
     flex: 1,
     height: 1340,
     overflow: 'hidden',

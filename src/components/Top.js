@@ -41,14 +41,17 @@ const Top = () => {
 
       <View style={[styles.topnav, styles.chuongLayout]}>
         {/* avatar */}
-        <View style={[styles.profile, styles.profileLayout]}>
+        <TouchableOpacity 
+          style={[styles.profile, styles.profileLayout]}
+          onPress={() => navigation.navigate("ProfileScreen")}
+        >
           <Image
             style={[styles.avatarIcon, styles.profileLayout]}
             resizeMode="cover"
             source={Images.AVATAR}
           />
-          <Text style={[styles.ngocQuach, styles.textTypo]}>Ngoc Quach</Text>
-        </View>
+          <Text style={[styles.userName, styles.textTypo]}>Nguyen Van A</Text>
+        </TouchableOpacity>
 
         <TouchableOpacity 
           style={[styles.tichdiem, styles.tichdiemPosition]}
@@ -147,8 +150,9 @@ const styles = StyleSheet.create({
     height: 32,
     left: 0,
     top: 0,
+    borderRadius: 20
   },
-  ngocQuach: {
+  userName: {
     top: 5,
     left: 40,
     width: 86,
