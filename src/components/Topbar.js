@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       position: 'absolute',
       bottom: 12,
-      left: 17
+      left: 17,
+      zIndex:10
    },
    btnText: {
       fontSize: 19,
