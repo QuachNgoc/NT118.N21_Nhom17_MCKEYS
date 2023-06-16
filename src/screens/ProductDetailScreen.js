@@ -13,7 +13,7 @@ import {
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import { Topbar, MenuTab } from '../components';
+import { TopWithBackBtn, MenuTab } from '../components';
 import { Color, Images } from '../contants';
 import { Display } from '../utils';
 
@@ -80,7 +80,7 @@ const ProductDetailScreen = () => {
    return (
       <SafeAreaView style={styles.container}>
          <ScrollView>
-            <Topbar
+            <TopWithBackBtn
                title="Sản phẩm"
                hasTitle
                hasProfile

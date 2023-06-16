@@ -1,19 +1,16 @@
 import * as React from 'react';
-import { useRef } from 'react';
 import {
-   Image,
    StyleSheet,
    Text,
    View,
    Pressable,
-   Dimensions,
    SafeAreaView,
    FlatList,
    ScrollView,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Top, MenuTab, CardMuaNgay, CardKM } from '../components';
-import { FontSize, Border, Color, Images } from '../contants';
+import { FontSize, Color, Images } from '../contants';
 
 const DATA = [
    {
@@ -71,189 +68,98 @@ const Home = () => {
 
    return (
       <SafeAreaView>
-         <ScrollView contentContainerStyle={styles.scrollView}>
-            <View style={styles.homemain}>
+         <ScrollView>
+            <View style={styles.container}>
+               {/* Top bar */}
                <Top />
-               <View style={[styles.groupmonan, styles.listmonanLayout]}>
-                  <View style={[styles.monngontxt, styles.orderbtnLayout]}>
-                     <Text style={[styles.monNgonPhaiThu, styles.xemTypo]}>
-                        Món ngon phải thử
+
+               {/* Món ngon phải thử */}
+               <View style={styles.sectionContainer}>
+                  <Text style={styles.sectionHeading}>Món ngon phải thử</Text>
+                  <FlatList
+                     data={DATA}
+                     horizontal
+                     showsHorizontalScrollIndicator={false}
+                     renderItem={({ item }) => <CardMuaNgay props={item} />}
+                     keyExtractor={(item) => item.menuId}
+                  />
+               </View>
+
+               {/* Khuyến mãi sập sàn */}
+               <View style={styles.sectionContainer}>
+                  <View style={styles.flexContainer}>
+                     <Text style={styles.sectionHeading}>
+                        Khuyến mãi sập sàn
                      </Text>
-
-                     <View style={[styles.listmonan, styles.listmonanLayout]}>
-                        <FlatList
-                           data={DATA}
-                           horizontal
-                           renderItem={({item}) => (
-                              <CardMuaNgay props={item} />
-                           )}
-                           keyExtractor={(item) => item.menuId}
-                        />
-                     </View>
+                     <Pressable
+                        // onPress={() => navigation.navigate('KhuyenMaiScreen')}
+                     >
+                        <Text style={styles.sectionLinkTxt}>{`Xem tất cả >>>`}</Text>
+                     </Pressable>
                   </View>
 
-                  <View style={styles.groupkhuyenmai}>
-                     <View
-                        style={[styles.khuyenmaitext, styles.orderbtnLayout]}
-                     >
-                        <Text style={[styles.khuyenmaiSp, styles.xemTypo]}>
-                           Khuyến mãi sập sàn
-                        </Text>
-                        <Pressable
-                           style={styles.xemtatcaContainer}
-                           onPress={() =>
-                              navigation.navigate('KhuyenMaiScreen')
-                           }
-                        >
-                           <Text
-                              style={[styles.xemtatca, styles.xemTypo]}
-                           >{`Xem tất cả >>>`}</Text>
-                        </Pressable>
-                     </View>
+                  <View>
+                     <FlatList
+                        data={DATA}
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        renderItem={({ item }) => <CardMuaNgay props={item} />}
+                        keyExtractor={(item) => item.id}
+                     />
+                  </View>
+               </View>
 
-                     <View style={[styles.listmonan, styles.listmonanLayout]}>
-                        <FlatList
-                           data={DATA}
-                           horizontal
-                           renderItem={({item}) => (
-                              <CardMuaNgay props={item} />
-                           )}
-                           keyExtractor={(item) => item.id}
-                        />
-                     </View>
+               {/* Khuyến mãi sập sàn 2 */}
+               <View style={styles.sectionContainer}>
+                  <View style={styles.flexContainer}>
+                     <Text style={styles.sectionHeading}>Khuyến mãi sập sàn</Text>
+                     <Pressable
+                        onPress={() => navigation.navigate('KhuyenMaiScreen')}
+                     >
+                        <Text style={styles.sectionLinkTxt}>{`Xem tất cả >>>`}</Text>
+                     </Pressable>
                   </View>
 
-                  <View style={styles.groupkhuyenmai}>
-                     <View
-                        style={[styles.khuyenmaitext, styles.orderbtnLayout]}
-                     >
-                        <Text style={[styles.khuyenmaiSp, styles.xemTypo]}>
-                           Khuyến mãi sập sàn
-                        </Text>
-                        <Pressable
-                           style={styles.xemtatcaContainer}
-                           onPress={() =>
-                              navigation.navigate('KhuyenMaiScreen')
-                           }
-                        >
-                           <Text
-                              style={[styles.xemtatca1, styles.xemTypo]}
-                           >{`Xem tất cả >>>`}</Text>
-                        </Pressable>
-                     </View>
-
-                     <View style={styles.listmonkm}>
-                        {DATAKM.map((item) => (
-                           <CardKM key={item.menuId} props={item} />
-                        ))}
-                     </View>
+                  <View>
+                     {DATAKM.map((item) => (
+                        <CardKM
+                           key={item.menuId}
+                           props={item}
+                        />
+                     ))}
                   </View>
                </View>
             </View>
          </ScrollView>
+
          <MenuTab />
       </SafeAreaView>
    );
 };
 const styles = StyleSheet.create({
-   scrollView: {
-      flexGrow: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-   },
-   homemain: {
+   container: {
       backgroundColor: 'rgba(211, 118, 0, 0.8)',
       flex: 1,
-      height: 1340,
       overflow: 'hidden',
       width: '100%',
+      paddingBottom: 61
    },
-   groupmonan: {
-      top: 392,
-      height: 286,
-      left: 21,
-      overflow: 'hidden',
+   sectionContainer: {
+      padding: 20,
    },
-   listmonanLayout: {
-      width: 439,
-      position: 'absolute',
+   sectionHeading: {
+      fontSize: 18,
+      color: Color.SECONDARY_WHITE,
+      marginBottom: 20,
    },
-   monngontxt: {
-      width: 388,
-      left: 8,
-      top: 0,
+   sectionLinkTxt: {
+      color: Color.LIGHT_YELLOW,
+      marginTop: 5
    },
-   orderbtnLayout: {
-      height: 21,
-      position: 'absolute',
-   },
-   monNgonPhaiThu: {
-      width: 198,
-      textAlign: 'left',
-      color: Color.white,
-      left: 0,
-      top: 0,
-      position: 'absolute',
-   },
-   xemTypo: {
-      fontWeight: '700',
-      fontSize: FontSize.size_mini,
-      textAlign: 'left',
-      height: 21,
-   },
-   xemtatca: {
-      left: 241,
-      color: '#fffdfd',
-      width: 147,
-      textAlign: 'left',
-      top: 0,
-      position: 'absolute',
-   },
-   xemtatcaContainer: {
-      left: 255,
-      top: 0,
-      position: 'absolute',
-   },
-   listmonanLayout: {
-      width: '100%',
-   },
-   listmonan: {
-      top: 49,
-      height: '90%',
-      left: 0,
-   },
-   groupkhuyenmai: {
-      top: 764,
-      left: 28,
-      width: 377,
-      height: 496,
-      position: 'absolute',
-      overflow: 'hidden',
-   },
-   khuyenmaitext: {
-      width: 375,
-      left: 2,
-      top: 0,
-   },
-   khuyenmaiSp: {
-      width: 182,
-      textAlign: 'left',
-      color: Color.white,
-      left: 0,
-      top: 0,
-      position: 'absolute',
-   },
-   xemtatca1: {
-      width: 120,
-      textAlign: 'left',
-      color: Color.white,
-   },
-   listmonkm: {
-      top: 52,
-      width: 371,
-      height: '100%',
-      left: 0,
-      position: 'absolute',
+   flexContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      paddingBottom: 5
    },
 });
 

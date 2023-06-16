@@ -8,7 +8,7 @@ import CardDoiDiem from './CardDoiDiem';
 import CardVoucher from './CardVoucher';
 import CardDonHang from './CardDonHang';
 import CardSPGoiY from './CardSPGoiY';
-import Topbar from './Topbar'
+import TopWithBackBtn from './TopWithBackBtn'
 
 export {
   InputWithIcon,
@@ -21,5 +21,5 @@ export {
   CardVoucher,
   CardDonHang,
   CardSPGoiY,
-  Topbar
+  TopWithBackBtn
 };
