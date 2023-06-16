@@ -2,9 +2,10 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { Color } from '../contants';
+import { useNavigation } from '@react-navigation/native';
 
-const GoBackBtn = ({navigation, text, navigateTo }) => {
-
+const GoBackBtn = ({text, navigateTo }) => {
+  const navigation = useNavigation();
   const handlePress = () => {
     if (navigateTo) {
       navigation.navigate(navigateTo);

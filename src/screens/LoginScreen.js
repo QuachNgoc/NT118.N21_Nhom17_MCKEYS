@@ -47,7 +47,8 @@ const LoginScreen = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.register}
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.push('RegisterScreen')}
+
       >
         <Text style={styles.registerText}>
           Haven't had account yet? Register now

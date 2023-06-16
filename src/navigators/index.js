@@ -12,6 +12,9 @@ import {
   KhuyenMaiScreen,
   DoiDiemScreen,
   DonHangScreen,
+  OrderHistoryScreen,
+  ProductDetailScreen
+
   CatetoryScreen,
   OrderDelivery,
   Restaurant
@@ -36,6 +39,8 @@ const Navigators = () => {
         <Stack.Screen name="KhuyenMaiScreen" component={KhuyenMaiScreen} />
         <Stack.Screen name="DoiDiemScreen" component={DoiDiemScreen} />
         <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
+        <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} />
+        <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} />
         <Stack.Screen name="CatetoryScreen" component={CatetoryScreen} />
         <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
         <Stack.Screen name="Restaurant" component={Restaurant} />

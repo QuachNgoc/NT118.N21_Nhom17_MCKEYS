@@ -13,7 +13,7 @@ const RegisterScreen = ({ navigation }) => {
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleRegister = () => {
+  const handleRegister = ({navigation}) => {
     // Handle login logic here
     console.log(
       `Register with username: ${username} and password: ${password}`
@@ -24,7 +24,9 @@ const RegisterScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <GoBackBtn text="Back to login" />
+      <GoBackBtn
+        text='Đăng nhập'
+      />
 
       <Image source={Images.PLATE} resizeMode="contain" style={styles.image} />
 

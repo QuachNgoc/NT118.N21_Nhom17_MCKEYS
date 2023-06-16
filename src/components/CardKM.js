@@ -8,7 +8,7 @@ const CardKM = ({props}) => {
   const navigation = useNavigation();
 
   return (
-    <View style={[styles.monkhuyenmai, styles.khuyenmaiLayout]}>
+    <TouchableOpacity onPress={() => navigation.push('ProductDetailScreen')} style={[styles.monkhuyenmai, styles.khuyenmaiLayout]}>
       <View style={[styles.monkhuyenmaiChild, styles.khuyenmaiLayout]} />
       <Image
         style={[styles.imgIcon, styles.monNgonLayout]}
@@ -28,7 +28,7 @@ const CardKM = ({props}) => {
           <Text style={[styles.DatNgay, styles.DatNgayTypo]}>Đặt Ngay</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

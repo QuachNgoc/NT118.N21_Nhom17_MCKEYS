@@ -17,6 +17,7 @@ const DATA = [
   {
     title: 'Lịch sử mua hàng',
     icon: 'dashboard',
+    to: 'OrderHistoryScreen',
   },
   {
     title: 'Phương thức thanh toán',
@@ -37,8 +38,7 @@ const ProfileScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.titleContainer}>
         <GoBackBtn
-          navigation={navigation}
-          text="Back"
+          text="Quay lại"
           style={styles.goBackBtn}
         />
 
@@ -82,13 +82,17 @@ const ProfileScreen = ({ navigation }) => {
         </View>
       </View>
 
-      <FlatList
-        style={styles.list}
-        data={DATA}
-        renderItem={({ item }) => (
-          <ProfileItem title={item.title} icon={item.icon} />
-        )}
-      />
+      <View style={styles.list}>
+        {DATA.map((item, index) => (
+          <ProfileItem
+            key={index}
+            title={item.title}
+            icon={item.icon}
+            navigation={navigation}
+            to={item.to}
+          />
+        ))}
+      </View>
 
       <TouchableOpacity style={styles.logout}>
         <Icon style={styles.logoutIcon} name="logout" />
@@ -102,7 +106,10 @@ const ProfileScreen = ({ navigation }) => {
 
 const ProfileItem = (props) => {
   return (
-    <TouchableOpacity style={styles.profileItemContainer}>
+    <TouchableOpacity
+      style={styles.profileItemContainer}
+      onPress={() => props.navigation.push(props.to)}
+    >
       <Icon style={styles.profileItemIcon} name={props.icon} />
       <Text style={styles.profileItemText}>{props.title}</Text>
       <Icon style={styles.profileItemRight} name="right" />
@@ -247,7 +254,7 @@ const styles = StyleSheet.create({
     borderRadius: 9,
     padding: 12,
     justifyContent: 'center',
-    marginBottom: 90,
+    marginTop: 30,
   },
   logoutIcon: {
     color: Color.DEFAULT_WHITE,
