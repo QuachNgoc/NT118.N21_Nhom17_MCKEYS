@@ -93,9 +93,6 @@ const styles = StyleSheet.create({
   topPosition: {
     height: 346,
     width: 414,
-    left: 0,
-    top: 20,
-    position: "absolute",
   },
   searchLayout: {
     height: 49,

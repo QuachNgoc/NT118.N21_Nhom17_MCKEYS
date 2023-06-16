@@ -14,7 +14,7 @@ import { useNavigation } from '@react-navigation/native';
 // import custom file
 import { Color, Images } from '../contants';
 
-const Topbar = ({ title, goBack, hasTitle, btnTitle, hasProfile }) => {
+const TopWithBackBtn = ({ title, goBack, hasTitle, btnTitle, hasProfile }) => {
    const navigation = useNavigation();
 
    return (
@@ -90,4 +90,4 @@ const styles = StyleSheet.create({
    }
 });
 
-export default Topbar;
+export default TopWithBackBtn;

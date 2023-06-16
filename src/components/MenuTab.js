@@ -18,7 +18,7 @@ const MenuTab = () => {
         resizeMode="cover"
         source={require("../../assets/images/menutabBG.png")}
       />
-      <TouchableOpacity 
+      <TouchableOpacity
         style={[styles.home, styles.homeLayout]}
         onPress={() => navigation.navigate("Home")}
       >
