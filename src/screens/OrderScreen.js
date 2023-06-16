@@ -43,7 +43,6 @@ const DATA = [
 const DonHangScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>
-      
       <View style={styles.homemain}>
         <Text style={[styles.donHang, styles.donHangTypo]}>
           Đơn hàng của tôi

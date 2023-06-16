@@ -11,7 +11,7 @@ import {
 
 import Icon from 'react-native-vector-icons/AntDesign';
 import { Color, FontSize, Images } from '../contants';
-import { GoBackBtn, MenuTab } from '../components';
+import { TopWithBackBtn, MenuTab } from '../components';
 
 const DATA = [
   {
@@ -36,13 +36,8 @@ const DATA = [
 const ProfileScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
+      <TopWithBackBtn hasTitle hasBack goBack title="Hồ sơ" />
       <View style={styles.titleContainer}>
-        <GoBackBtn
-          text="Quay lại"
-          style={styles.goBackBtn}
-        />
-
-        <Text style={styles.title}>Profile</Text>
 
         <View style={styles.userContainer}>
           <TouchableOpacity
@@ -129,9 +124,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: 60,
+    paddingTop: 30,
     paddingBottom: 100,
-    backgroundColor: Color.orangered_200,
+    backgroundColor: Color.DEFAULT_YELLOW,
     width: '100%',
     position: 'relative',
     marginBottom: 60,
@@ -190,7 +185,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.DEFAULT_WHITE,
     width: '88%',
     position: 'absolute',
-    top: 250,
+    top: 170,
     paddingVertical: 26,
     borderRadius: 9,
     elevation: 1,

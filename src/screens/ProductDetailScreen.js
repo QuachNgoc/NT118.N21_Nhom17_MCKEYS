@@ -9,6 +9,7 @@ import {
    Text,
    TextInput,
    TouchableOpacity,
+   Button,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -38,6 +39,7 @@ const DATA = [
 
 const ProductDetailScreen = () => {
    const [qty, setQty] = useState('1');
+   const [variation, setVariation] = useState('');
    const [liked, setLiked] = useState(false);
    const flatListRef = useRef(null);
 
@@ -85,7 +87,6 @@ const ProductDetailScreen = () => {
                hasTitle
                hasProfile
                goBack
-               btnTitle="Quay lại"
             />
 
             {/* Products images slide */}
@@ -153,7 +154,7 @@ const ProductDetailScreen = () => {
 
             {/* Name and Price */}
             <View style={styles.namePriceContainer}>
-               <Text style={styles.name}>Tên sản phẩm</Text>
+               <Text style={styles.name}>Burger Khoai Tây Chiên Salad</Text>
                <Text style={styles.price}>100.000đ</Text>
             </View>
 
@@ -161,7 +162,9 @@ const ProductDetailScreen = () => {
             <View style={styles.variationContainer}>
                <Text style={styles.variationTxt}>Phân loại</Text>
                <View style={styles.variationRow}>
-                  <TouchableOpacity style={styles.variationBtn}>
+                  <TouchableOpacity
+                     style={[styles.variationBtn, styles.variationBtnActive]}
+                  >
                      <Text style={styles.variationBtnTxt}>S</Text>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.variationBtn}>
@@ -175,11 +178,36 @@ const ProductDetailScreen = () => {
 
             <View style={styles.descContainer}>
                <Text style={styles.descTitle}>Mô tả sản phẩm</Text>
-               <Text style={styles.descContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
-               <Text style={styles.descContent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+               <Text style={styles.descContent}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+               </Text>
+               <Text style={styles.descContent}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+               </Text>
             </View>
          </ScrollView>
-         <MenuTab />
+         <View style={styles.bottomBarContainer}>
+            <TouchableOpacity style={[styles.bottomBarBtn, styles.cartBtn]}>
+               <Text style={styles.bottomBarBtnTxt}>Thêm vào giỏ hàng</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.bottomBarBtn, styles.payBtn]}>
+               <Text style={styles.bottomBarBtnTxt}>Mua ngay</Text>
+            </TouchableOpacity>
+         </View>
       </SafeAreaView>
    );
 };
@@ -188,6 +216,8 @@ const styles = StyleSheet.create({
    container: {
       height: '100%',
       width: '100%',
+      paddingBottom: 61,
+      backgroundColor: Color.LIGHT_GREY,
    },
    productImg: {
       height: Display.setWidth(100),
@@ -203,14 +233,14 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: Color.DARK_FIVE,
+      backgroundColor: Color.SECONDARY_WHITE,
       width: '50%',
       borderRadius: 60,
       borderWidth: 1,
-      borderColor: Color.DARK_FOUR,
+      borderColor: Color.DARK_FIVE,
       borderStyle: 'solid',
       position: 'absolute',
-      top: -30,
+      top: -60,
       zIndex: 10,
    },
    qtyBtn: {
@@ -222,6 +252,7 @@ const styles = StyleSheet.create({
       fontSize: 40,
       minWidth: 100,
       textAlign: 'center',
+      fontWeight: '400',
    },
    qtyIcon: {
       color: Color.DEFAULT_BLACK,
@@ -230,18 +261,16 @@ const styles = StyleSheet.create({
    },
    addToFavoriteWrapper: {
       position: 'absolute',
-      right: 30,
-      top: -27,
+      left: 30,
+      top: -57,
       zIndex: 10,
       padding: 4,
-      borderStyle: 'solid',
-      borderRadius: 5,
-      borderWidth: 1,
-      borderColor: Color.DEFAULT_BLACK,
-      backgroundColor: Color.LIGHT_YELLOW,
+      borderRadius: 10,
+      backgroundColor: Color.DEFAULT_WHITE,
    },
    addToFavoriteIcon: {
       fontSize: 40,
+      fontWeight: '100',
    },
    addToFavoriteIconActive: {
       fontSize: 40,
@@ -255,7 +284,9 @@ const styles = StyleSheet.create({
       paddingVertical: 10,
    },
    name: {
-      fontSize: 24,
+      fontSize: 26,
+      fontWeight: '600',
+      flex: 1,
    },
    price: {
       fontSize: 28,
@@ -264,40 +295,79 @@ const styles = StyleSheet.create({
       borderBottomWidth: 2,
       borderStyle: 'solid',
       fontWeight: 'bold',
+      color: Color.DEFAULT_YELLOW,
    },
    variationContainer: {
       flexDirection: 'row',
       alignItems: 'center',
       marginLeft: 20,
-      marginTop: 30
+      marginTop: 30,
    },
    variationTxt: {
-      fontSize: 16
+      fontSize: 16,
+      fontWeight: '600',
    },
    variationRow: {
       flexDirection: 'row',
    },
    variationBtn: {
-      paddingHorizontal: 10,
-      paddingVertical: 5,
+      height: 40,
+      width: 40,
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
       borderStyle: 'solid',
       borderWidth: 1,
       borderColor: Color.DEFAULT_BLACK,
       marginLeft: 20,
    },
+   variationBtnActive: {
+      backgroundColor: Color.DEFAULT_YELLOW,
+   },
    variationBtnTxt: {
-
+      fontSize: 18,
    },
    descContainer: {
-      paddingHorizontal: 20,
+      marginHorizontal: 10,
+      padding: 10,
       marginVertical: 20,
+      backgroundColor: Color.LIGHT_YELLOW,
+      borderRadius: 10,
    },
    descTitle: {
-      fontSize: 20
+      fontSize: 18,
+      fontWeight: 'bold',
    },
    descContent: {
-      marginTop: 10
-   }
+      marginTop: 10,
+   },
+   bottomBarContainer: {
+      position: 'absolute',
+      bottom: 0,
+      flexDirection: 'row',
+      width: '100%',
+      height: 61,
+      alignItems: 'center',
+   },
+   bottomBarBtn: {
+      height: '100%',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center'
+   },
+   bottomBarBtnTxt: {
+      color: Color.DEFAULT_WHITE,
+      fontSize: 18,
+      textTransform: 'uppercase'
+   },
+   cartBtn: {
+      backgroundColor: Color.DEFAULT_GREEN,
+      flex: 1
+   },
+   payBtn: {
+      backgroundColor: Color.DEFAULT_RED,
+      paddingHorizontal: 15
+   },
 });
 
 export default ProductDetailScreen;

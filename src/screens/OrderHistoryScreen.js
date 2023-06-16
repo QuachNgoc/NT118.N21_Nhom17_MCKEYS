@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   FlatList
 } from 'react-native';
-import { GoBackBtn, MenuTab } from '../components';
+import { GoBackBtn, MenuTab, TopWithBackBtn } from '../components';
 import { Color, FontSize } from '../contants';
 
 const DATA = [
@@ -80,8 +80,7 @@ const DATA = [
 const OrderHistoryScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <GoBackBtn text="Quay lại" />
-      <Text style={styles.title}>Lịch sử mua hàng</Text>
+      <TopWithBackBtn hasTitle title='Lịch sử mua hàng' goBack/>
       <FlatList style={styles.list}
         data={DATA}
         renderItem={({ item }) => (
@@ -124,10 +123,10 @@ const OrderItem = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Color.DEFAULT_YELLOW,
     height: '100%',
     flexDirection: 'column',
     alignItems: 'center',
+    paddingBottom: 65
   },
   title: {
     textTransform: 'uppercase',
@@ -142,7 +141,9 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   list: {
-    width: '88%'
+    width: '100%',
+    paddingHorizontal: '6%',
+    paddingVertical: 30,
   },
   orderContainer: {
     backgroundColor: Color.DEFAULT_WHITE,

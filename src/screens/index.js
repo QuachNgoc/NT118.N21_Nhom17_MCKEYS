@@ -5,7 +5,7 @@ import OnBoardingScreen from './OnBoardingScreen';
 import Home from './Home';
 import KhuyenMaiScreen from './KhuyenMaiScreen';
 import DoiDiemScreen from './DoiDiemScreen';
-import DonHangScreen from './DonHangScreen';
+import OrderScreen from './OrderScreen';
 import ProfileScreen from './ProfileScreen';
 import ProfileEditScreen from './ProfileEditScreen';
 
@@ -14,6 +14,7 @@ import ProductDetailScreen from './ProductDetailScreen';
 import CatetoryScreen from './CatetoryScreen';
 import OrderDelivery from './OrderDelivery';
 import Restaurant from './Restaurant';
+import PaymentSuccessScreen from './PaymentSuccessScreen';
 
 
 export {
@@ -26,10 +27,11 @@ export {
   DoiDiemScreen,
   ProfileScreen,
   ProfileEditScreen,
-  DonHangScreen,
+  OrderScreen,
   OrderHistoryScreen,
   ProductDetailScreen,
   CatetoryScreen,
   OrderDelivery,
-  Restaurant
+  Restaurant,
+  PaymentSuccessScreen
 };
