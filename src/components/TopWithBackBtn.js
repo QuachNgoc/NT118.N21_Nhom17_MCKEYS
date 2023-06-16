@@ -14,7 +14,7 @@ import { useNavigation } from '@react-navigation/native';
 // import custom file
 import { Color, Images } from '../contants';
 
-const TopWithBackBtn = ({ title, goBack, hasTitle, btnTitle, hasProfile }) => {
+const TopWithBackBtn = ({ title, goBack, hasTitle, hasProfile }) => {
    const navigation = useNavigation();
 
    return (
@@ -25,10 +25,9 @@ const TopWithBackBtn = ({ title, goBack, hasTitle, btnTitle, hasProfile }) => {
                onPress={() => navigation.goBack()}
             >
                <Icon
-                  style={styles.btnText}
+                  style={styles.btnIcon}
                   name="chevron-left"
                />
-               {btnTitle && <Text style={styles.btnText}>{btnTitle}</Text>}
             </TouchableOpacity>
          )}
 
@@ -53,24 +52,29 @@ const styles = StyleSheet.create({
       paddingBottom: 10,
       width: '100%',
       minHeight: 100,
+      backgroundColor: Color.DEFAULT_YELLOW
    },
    btn: {
       flexDirection: 'row',
       alignItems: 'center',
       position: 'absolute',
-      bottom: 12,
+      bottom: 8,
       left: 17,
-      zIndex:10
-   },
-   btnText: {
+      zIndex:10,
       fontSize: 19,
+   },
+   btnIcon: {
+      fontSize: 33,
+      padding: 4,
+      color: Color.DEFAULT_WHITE
    },
    title: {
       flex: 1,
-      fontSize: 26,
+      fontSize: 24,
       textAlign: 'center',
       paddingTop: 15,
-      fontWeight: 'bold',
+      fontWeight: '400',
+      color: Color.DEFAULT_WHITE
    },
    profile: {
       height: 38,
@@ -78,7 +82,7 @@ const styles = StyleSheet.create({
       position: 'absolute',
       right: 31,
       bottom: 12,
-      borderColor: 'black',
+      borderColor: Color.LIGHT_GREY,
       borderWidth: 1,
       borderStyle: 'solid',
       borderRadius: 19

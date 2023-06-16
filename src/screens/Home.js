@@ -104,7 +104,7 @@ const Home = () => {
                         horizontal
                         showsHorizontalScrollIndicator={false}
                         renderItem={({ item }) => <CardMuaNgay props={item} />}
-                        keyExtractor={(item) => item.id}
+                        keyExtractor={(item) => item.menuId}
                      />
                   </View>
                </View>
