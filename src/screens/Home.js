@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useRef } from 'react';
 import {
    StyleSheet,
    Text,
@@ -11,6 +11,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import { Top, MenuTab, CardMuaNgay, CardKM } from '../components';
 import { FontSize, Color, Images } from '../contants';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DATA = [
    {
@@ -65,10 +66,15 @@ const DATAKM = [
 
 const Home = () => {
    const navigation = useNavigation();
+   const scrollViewRef = useRef();
+
+   const handleScrollToTop = () => {
+      scrollViewRef.current.scrollTo({ x: 0, y: 0, animated: true });
+   };
 
    return (
       <SafeAreaView>
-         <ScrollView>
+         <ScrollView ref={scrollViewRef}>
             <View style={styles.container}>
                {/* Top bar */}
                <Top />
@@ -92,46 +98,59 @@ const Home = () => {
                         Khuyến mãi sập sàn
                      </Text>
                      <Pressable
-                        // onPress={() => navigation.navigate('KhuyenMaiScreen')}
+                     // onPress={() => navigation.navigate('KhuyenMaiScreen')}
                      >
-                        <Text style={styles.sectionLinkTxt}>{`Xem tất cả >>>`}</Text>
+                        <Text
+                           style={styles.sectionLinkTxt}
+                        >{`Xem tất cả >>>`}</Text>
                      </Pressable>
                   </View>
 
-                  <View>
-                     <FlatList
-                        data={DATA}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        renderItem={({ item }) => <CardMuaNgay props={item} />}
-                        keyExtractor={(item) => item.menuId}
-                     />
-                  </View>
+                  <FlatList
+                     data={DATA}
+                     horizontal
+                     showsHorizontalScrollIndicator={false}
+                     renderItem={({ item }) => <CardMuaNgay props={item} />}
+                     keyExtractor={(item) => item.menuId}
+                  />
                </View>
 
                {/* Khuyến mãi sập sàn 2 */}
                <View style={styles.sectionContainer}>
                   <View style={styles.flexContainer}>
-                     <Text style={styles.sectionHeading}>Khuyến mãi sập sàn</Text>
+                     <Text style={styles.sectionHeading}>
+                        Khuyến mãi sập sàn
+                     </Text>
                      <Pressable
                         onPress={() => navigation.navigate('KhuyenMaiScreen')}
                      >
-                        <Text style={styles.sectionLinkTxt}>{`Xem tất cả >>>`}</Text>
+                        <Text
+                           style={styles.sectionLinkTxt}
+                        >{`Xem tất cả >>>`}</Text>
                      </Pressable>
                   </View>
 
-                  <View>
-                     {DATAKM.map((item) => (
-                        <CardKM
-                           key={item.menuId}
-                           props={item}
-                        />
-                     ))}
-                  </View>
+                  {DATAKM.map((item) => (
+                     <CardKM
+                        key={item.menuId}
+                        props={item}
+                     />
+                  ))}
                </View>
             </View>
          </ScrollView>
-
+         <View style={styles.TopBtncontainer}>
+            <Pressable
+               style={styles.button}
+               onPress={handleScrollToTop}
+            >
+               <Icon
+                  name="arrow-up"
+                  size={20}
+                  color="white"
+               />
+            </Pressable>
+         </View>
          <MenuTab />
       </SafeAreaView>
    );
@@ -142,7 +161,7 @@ const styles = StyleSheet.create({
       flex: 1,
       overflow: 'hidden',
       width: '100%',
-      paddingBottom: 61
+      paddingBottom: 61,
    },
    sectionContainer: {
       padding: 20,
@@ -154,12 +173,23 @@ const styles = StyleSheet.create({
    },
    sectionLinkTxt: {
       color: Color.LIGHT_YELLOW,
-      marginTop: 5
+      marginTop: 5,
    },
    flexContainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      paddingBottom: 5
+      paddingBottom: 5,
+   },
+   TopBtncontainer: {
+      position: 'absolute',
+      right: 20,
+      bottom: 100,
+      zIndex: 999, // Đảm bảo nút hiển thị trên các thành phần khác
+   },
+   button: {
+      backgroundColor: '#d97a00',
+      padding: 10,
+      borderRadius: 5,
    },
 });
 
