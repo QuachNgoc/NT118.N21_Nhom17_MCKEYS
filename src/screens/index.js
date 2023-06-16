@@ -28,7 +28,7 @@ export {
   ProfileEditScreen,
   DonHangScreen,
   OrderHistoryScreen,
-  ProductDetailScreen
+  ProductDetailScreen,
   CatetoryScreen,
   OrderDelivery,
   Restaurant
