@@ -13,8 +13,7 @@ import {
   DoiDiemScreen,
   DonHangScreen,
   OrderHistoryScreen,
-  ProductDetailScreen
-
+  ProductDetailScreen,
   CatetoryScreen,
   OrderDelivery,
   Restaurant

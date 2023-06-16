@@ -5,7 +5,6 @@ import { useNavigation } from "@react-navigation/native";
 
 const CardMuaNgay = ({props}) => {
   const navigation = useNavigation();
-
   return (
     <View style={styles.monNgonLayout}>
       <View style={[styles.monNgonChild, styles.childBorder]} />
@@ -26,7 +25,7 @@ const CardMuaNgay = ({props}) => {
     </View>
   );
 };
-const styles = StyleSheet.create({ 
+const styles = StyleSheet.create({
   monNgonLayout: {
     left: 0,
     top: 0,

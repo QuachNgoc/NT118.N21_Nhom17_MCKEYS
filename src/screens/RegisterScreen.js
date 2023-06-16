@@ -5,21 +5,18 @@ import Icon from "react-native-vector-icons/Feather";
 import { Display } from "../utils";
 import { Color, Images } from "../contants";
 import { GoBackBtn, InputWithIcon } from "../components";
-import { useNavigation } from "@react-navigation/native";
 
-const RegisterScreen = ({ navigation }) => {
+const RegisterScreen = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleRegister = ({navigation}) => {
+  const handleRegister = () => {
     // Handle login logic here
     console.log(
       `Register with username: ${username} and password: ${password}`
     );
-    const navigation = useNavigation();
-    navigation.navigate("LoginScreen");
   };
 
   return (
