@@ -1,35 +1,29 @@
-import SplashScreen from './SpalshScreen';
-import LoginScreen from './LoginScreen';
-import RegisterScreen from './RegisterScreen';
-import OnBoardingScreen from './OnBoardingScreen';
-import Home from './Home';
-import KhuyenMaiScreen from './KhuyenMaiScreen';
-import DoiDiemScreen from './DoiDiemScreen';
-import DonHangScreen from './DonHangScreen';
-import ProfileScreen from './ProfileScreen';
-import ProfileEditScreen from './ProfileEditScreen';
-
-import OrderHistoryScreen from './OrderHistoryScreen';
-import ProductDetailScreen from './ProductDetailScreen';
-import CatetoryScreen from './CatetoryScreen';
-import OrderDelivery from './OrderDelivery';
-import Restaurant from './Restaurant';
-
+import SplashScreen from './SplashScreen';
+import WelcomeScreen from './WelcomeScreen';
+import SigninScreen from './SigninScreen';
+import SignupScreen from './SignupScreen';
+import ForgotPasswordScreen from './ForgotPasswordScreen';
+import RegisterPhoneScreen from './RegisterPhoneScreen';
+import VerificationScreen from './VerificationScreen';
+import HomeScreen from './HomeScreen';
+import RestaurantScreen from './RestaurantScreen';
+import CartScreen from './CartScreen';
+import FoodScreen from './FoodScreen';
+import BookmarkScreen from './BookmarkScreen';
+import AccountScreen from './AccountScreen';
 
 export {
   SplashScreen,
-  LoginScreen,
-  RegisterScreen,
-  OnBoardingScreen,
-  Home,
-  KhuyenMaiScreen,
-  DoiDiemScreen,
-  ProfileScreen,
-  ProfileEditScreen,
-  DonHangScreen,
-  OrderHistoryScreen,
-  ProductDetailScreen,
-  CatetoryScreen,
-  OrderDelivery,
-  Restaurant
+  WelcomeScreen,
+  SigninScreen,
+  SignupScreen,
+  ForgotPasswordScreen,
+  RegisterPhoneScreen,
+  VerificationScreen,
+  HomeScreen,
+  RestaurantScreen,
+  CartScreen,
+  FoodScreen,
+  BookmarkScreen,
+  AccountScreen,
 };

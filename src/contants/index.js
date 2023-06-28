@@ -1,8 +1,9 @@
-import Color from './Color';
+import Colors from './Colors';
 import Images from './Images';
-import GOOGLE_API_KEY from './GOOGLE_API_KEY';
-import Border from "./Border";
-import FontSize from "./FontSize";
-import Icon from './Icon';
+import Fonts from './Fonts';
+import General from './General';
+import CountryCode from './CountryCode';
+import ApiContants from './ApiContants';
+import Mock from './Mock';
 
-export {Color, Images, GOOGLE_API_KEY, Border, FontSize, Icon};
+export {Colors, Images, Fonts, General, CountryCode, ApiContants, Mock};

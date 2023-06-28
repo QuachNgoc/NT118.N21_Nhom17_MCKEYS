@@ -1,48 +1,63 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
+import React, {useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import {
-  LoginScreen,
-  ProfileScreen,
-  RegisterScreen,
   SplashScreen,
-  ProfileEditScreen,
-  OnBoardingScreen,
-  Home,
-  KhuyenMaiScreen,
-  DoiDiemScreen,
-  DonHangScreen,
-  OrderHistoryScreen,
-  ProductDetailScreen,
-  CatetoryScreen,
-  OrderDelivery,
-  Restaurant
+  WelcomeScreen,
+  SigninScreen,
+  SignupScreen,
+  ForgotPasswordScreen,
+  RegisterPhoneScreen,
+  VerificationScreen,
+  HomeScreen,
+  RestaurantScreen,
+  FoodScreen,
 } from '../screens';
+import HomeTabs from './BottomTabs';
+import {useSelector, useDispatch} from 'react-redux';
+import {GeneralAction} from '../actions';
 
 const Stack = createStackNavigator();
 
 const Navigators = () => {
+  const {isAppLoading, token, isFirstTimeUse} = useSelector(
+    state => state?.generalState,
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(GeneralAction.appStart());
+  }, []);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="SplashScreen" component={SplashScreen} />
-        <Stack.Screen name="OnBoardingScreen" component={OnBoardingScreen} />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
-        <Stack.Screen name="ProfileEditScreen" component={ProfileEditScreen} />
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="KhuyenMaiScreen" component={KhuyenMaiScreen} />
-        <Stack.Screen name="DoiDiemScreen" component={DoiDiemScreen} />
-        <Stack.Screen name="DonHangScreen" component={DonHangScreen} />
-        <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} />
-        <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} />
-        <Stack.Screen name="CatetoryScreen" component={CatetoryScreen} />
-        <Stack.Screen name="OrderDelivery" component={OrderDelivery} />
-        <Stack.Screen name="Restaurant" component={Restaurant} />
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {isAppLoading ? (
+          <Stack.Screen name="Splash" component={SplashScreen} />
+        ) : !token || token === null || token === '' ? (
+          <>
+            {isFirstTimeUse && (
+              <Stack.Screen name="Welcome" component={WelcomeScreen} />
+            )}
+            <Stack.Screen name="Signin" component={SigninScreen} />
+            <Stack.Screen name="Signup" component={SignupScreen} />
+            <Stack.Screen
+              name="ForgotPassword"
+              component={ForgotPasswordScreen}
+            />
+            <Stack.Screen
+              name="RegisterPhone"
+              component={RegisterPhoneScreen}
+            />
+            <Stack.Screen name="Verification" component={VerificationScreen} />
+          </>
+        ) : (
+          <>
+            <Stack.Screen name="HomeTabs" component={HomeTabs} />
+            <Stack.Screen name="Restaurant" component={RestaurantScreen} />
+            <Stack.Screen name="Food" component={FoodScreen} />
+          </>
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   );
