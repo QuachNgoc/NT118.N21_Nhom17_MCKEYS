@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 13 * 1.4,
     color: Colors.DEFAULT_BLACK,
-    ffontWeight: 500,
+    fontWeight: 500,
   },
   signupText: {
     fontSize: 13,
