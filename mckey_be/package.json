@@ -17,8 +17,9 @@
     "morgan": "~1.9.1"
   },
   "projectConfig": {
-    "mongoConnectionUrl": "mongodb+srv://20520655:Ngoc2002@ngoc.l17u2o0.mongodb.net/?retryWrites=true&w=majority",
-    "serverIp": "localhost",
-    "serverPort": 3000
+    "mongoConnectionUrl": "mongodb+srv://nt118n21:13899003401154@atlascluster.hoppunm.mongodb.net/nt118n21?retryWrites=true&w=majority",
+    "serverIp": "192.168.56.1",
+    "serverPort": 3000,
+    "backendApiBaseUrl": "http://192.168.56.1:3000"
   }
 }
