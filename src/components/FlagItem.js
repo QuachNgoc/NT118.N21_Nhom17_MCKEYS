@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 14 * 1.4,
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginRight: 10,
   },
 });

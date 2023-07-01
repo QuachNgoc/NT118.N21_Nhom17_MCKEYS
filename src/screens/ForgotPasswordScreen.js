@@ -28,11 +28,11 @@ const ForgotPasswordScreen = () => {
           size={30}
           onPress={() => navigation.goBack()}
         />
-        <Text style={styles.headerTitle}>Forgot Password</Text>
+        <Text style={styles.headerTitle}>Quên mật khẩu</Text>
       </View>
-      <Text style={styles.title}>Forgot Password</Text>
+      <Text style={styles.title}>Quên mật khẩu</Text>
       <Text style={styles.content}>
-        Enter your email, so that we can help you to recover your password.
+        Nhập email của bạn để chúng tôi có thể giúp bạn lấy lại mật khẩu.
       </Text>
       <View style={styles.inputContainer}>
         <View style={styles.inputSubContainer}>
@@ -51,7 +51,7 @@ const ForgotPasswordScreen = () => {
         </View>
       </View>
       <TouchableOpacity style={styles.signinButton}>
-        <Text style={styles.signinButtonText}>Reset Password</Text>
+        <Text style={styles.signinButtonText}>Đặt lại mật khẩu</Text>
       </TouchableOpacity>
     </View>
   );
@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     width: Display.setWidth(80),
     textAlign: 'center',
   },
   title: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     marginTop: 50,
     marginBottom: 10,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginTop: 10,
     marginBottom: 20,
     marginHorizontal: 20,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 18 * 1.4,
     color: Colors.DEFAULT_WHITE,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
 });
 

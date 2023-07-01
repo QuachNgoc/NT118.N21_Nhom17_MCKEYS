@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   categoryText: isActive => ({
     fontSize: 10,
     lineHeight: 10 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_WHITE,
     marginTop: 5,
     opacity: isActive ? 1 : 0.5,

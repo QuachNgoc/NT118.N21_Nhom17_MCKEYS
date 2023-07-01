@@ -130,9 +130,9 @@ const SignupScreen = ({navigation}) => {
         />
         <Text style={styles.headerTitle}>Sign Up</Text>
       </View>
-      <Text style={styles.title}>Create Account</Text>
+      <Text style={styles.title}>Tạo tài khoản</Text>
       <Text style={styles.content}>
-        Enter your email, choose a username and password
+        Nhập email của bạn, chọn tên người dùng và mật khẩu
       </Text>
       <View style={inputStyle(usernameState)}>
         <View style={styles.inputSubContainer}>
@@ -211,14 +211,14 @@ const SignupScreen = ({navigation}) => {
           <Text style={styles.signinButtonText}>Create Account</Text>
         )}
       </TouchableOpacity>
-      <Text style={styles.orText}>OR</Text>
+      <Text style={styles.orText}>Hoặc</Text>
       <TouchableOpacity style={styles.facebookButton}>
         <View style={styles.socialButtonsContainer}>
           <View style={styles.signinButtonLogoContainer}>
             <Image source={Images.FACEBOOK} style={styles.signinButtonLogo} />
           </View>
           <Text style={styles.socialSigninButtonText}>
-            Connect with Facebook
+            Đăng nhập bằng Facebook
           </Text>
         </View>
       </TouchableOpacity>
@@ -227,7 +227,7 @@ const SignupScreen = ({navigation}) => {
           <View style={styles.signinButtonLogoContainer}>
             <Image source={Images.GOOGLE} style={styles.signinButtonLogo} />
           </View>
-          <Text style={styles.socialSigninButtonText}>Connect with Google</Text>
+          <Text style={styles.socialSigninButtonText}>Đăng nhập bằng Google</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -247,14 +247,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     width: Display.setWidth(80),
     textAlign: 'center',
   },
   title: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     marginTop: 50,
     marginBottom: 10,
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginTop: 10,
     marginBottom: 20,
     marginHorizontal: 20,
@@ -301,13 +301,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 18 * 1.4,
     color: Colors.DEFAULT_WHITE,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   orText: {
     fontSize: 15,
     lineHeight: 15 * 1.4,
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginLeft: 5,
     alignSelf: 'center',
     marginTop: 20,
@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_WHITE,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   signinButtonLogoContainer: {
     backgroundColor: Colors.DEFAULT_WHITE,
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     lineHeight: 10 * 1.4,
     color: Colors.DEFAULT_RED,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginHorizontal: 20,
     marginVertical: 3,
   },

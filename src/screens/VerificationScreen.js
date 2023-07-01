@@ -41,7 +41,7 @@ const VerificationScreen = ({
       </View>
       <Text style={styles.title}>OTP Verification</Text>
       <Text style={styles.content}>
-        Enter the OTP number just sent you at{' '}
+      Nhập số OTP vừa được gửi cho bạn tại{' '}
         <Text style={styles.phoneNumberText}>{phoneNumber}</Text>
       </Text>
       <View style={styles.otpContainer}>
@@ -97,7 +97,7 @@ const VerificationScreen = ({
       <TouchableOpacity
         style={styles.signinButton}
         onPress={() => console.log(otp)}>
-        <Text style={styles.signinButtonText}>Verify</Text>
+        <Text style={styles.signinButtonText}>Xác minh</Text>
       </TouchableOpacity>
     </View>
   );
@@ -116,14 +116,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     width: Display.setWidth(80),
     textAlign: 'center',
   },
   title: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     marginTop: 50,
     marginBottom: 10,
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginTop: 10,
     marginBottom: 20,
     marginHorizontal: 20,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 18 * 1.4,
     color: Colors.DEFAULT_WHITE,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
 });
 

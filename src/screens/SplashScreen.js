@@ -12,7 +12,7 @@ const SplashScreen = () => {
         translucent
       />
       <Image source={Images.PLATE} resizeMode="contain" style={styles.image} />
-      <Text style={styles.titleText}>FooDelivery</Text>
+      <Text style={styles.titleText}>MCKEYS</Text>
     </View>
   );
 };
@@ -30,8 +30,9 @@ const styles = StyleSheet.create({
   },
   titleText: {
     color: Colors.DEFAULT_WHITE,
-    fontSize: 32,
-    fontFamily: Fonts.POPPINS_LIGHT,
+    fontSize: 40,
+    top: 30,
+    fontWeight: 700
   },
 });
 

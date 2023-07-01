@@ -70,7 +70,7 @@ const FoodScreen = ({
         <View style={styles.mainContainer}>
           <View style={styles.titleHeaderContainer}>
             <Text style={styles.titleText}>{food?.name}</Text>
-            <Text style={styles.priceText}>$ {food?.price}</Text>
+            <Text style={styles.priceText}>{food?.price} đ</Text>
           </View>
           <View style={styles.subHeaderContainer}>
             <View style={styles.rowAndCenter}>
@@ -84,11 +84,11 @@ const FoodScreen = ({
             </View>
             <View style={styles.rowAndCenter}>
               <Image style={styles.iconImage} source={Images.DELIVERY_TIME} />
-              <Text style={styles.deliveryText}>20 min</Text>
+              <Text style={styles.deliveryText}>20 phút</Text>
             </View>
             <View style={styles.rowAndCenter}>
               <Image style={styles.iconImage} source={Images.DELIVERY_CHARGE} />
-              <Text style={styles.deliveryText}>Free Delivery</Text>
+              <Text style={styles.deliveryText}>Miễn phí vận chuyển</Text>
             </View>
           </View>
           <View style={styles.subMenuContainer}>
@@ -111,13 +111,13 @@ const FoodScreen = ({
           <View style={styles.detailsContainer}>
             {food?.description ? (
               <>
-                <Text style={styles.detailHeader}>Description</Text>
+                <Text style={styles.detailHeader}>Miêu tả</Text>
                 <Text style={styles.detailContent}>{food?.description}</Text>
               </>
             ) : null}
             {food?.ingredients ? (
               <>
-                <Text style={styles.detailHeader}>Ingredients</Text>
+                <Text style={styles.detailHeader}>Thành phần</Text>
                 <Text style={styles.detailContent}>{food?.ingredients}</Text>
               </>
             ) : null}
@@ -144,7 +144,7 @@ const FoodScreen = ({
           style={styles.cartButton}
           onPress={() => navigation.navigate('Cart')}
           activeOpacity={0.8}>
-          <Text style={styles.cartButtonText}>Go to Cart</Text>
+          <Text style={styles.cartButtonText}>Đi đến Giỏ hàng</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -177,13 +177,13 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 23,
     lineHeight: 23 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_BLACK,
   },
   priceText: {
     fontSize: 23,
     lineHeight: 23 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_YELLOW,
   },
   subHeaderContainer: {
@@ -200,14 +200,14 @@ const styles = StyleSheet.create({
   ratingText: {
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     color: Colors.DEFAULT_BLACK,
     marginLeft: 5,
   },
   reviewsText: {
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_BLACK,
     marginLeft: 5,
   },
@@ -218,7 +218,7 @@ const styles = StyleSheet.create({
   deliveryText: {
     fontSize: 12,
     lineHeight: 12 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_BLACK,
     marginLeft: 3,
   },
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
   subMenuButtonText: {
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_BLACK,
   },
   detailsContainer: {
@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
   detailHeader: {
     fontSize: 15,
     lineHeight: 15 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_BLACK,
     marginTop: 10,
     marginBottom: 2,
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   detailContent: {
     fontSize: 12,
     lineHeight: 12 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.INACTIVE_GREY,
     textAlign: 'justify',
   },
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_BLACK,
     fontSize: 14,
     lineHeight: 14 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     marginHorizontal: 8,
   },
   cartButton: {
@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_WHITE,
     fontSize: 14,
     lineHeight: 14 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
 });
 

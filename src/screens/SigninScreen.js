@@ -61,9 +61,9 @@ const SigninScreen = ({navigation}) => {
         />
         <Text style={styles.headerTitle}>Sign In</Text>
       </View>
-      <Text style={styles.title}>Welcome</Text>
+      <Text style={styles.title}>Chào mừng</Text>
       <Text style={styles.content}>
-        Enter your username and password, and enjoy ordering food
+      Nhập tên người dùng và mật khẩu của bạn, và thưởng thức đặt món ăn
       </Text>
       <View style={styles.inputContainer}>
         <View style={styles.inputSubContainer}>
@@ -112,12 +112,12 @@ const SigninScreen = ({navigation}) => {
       <View style={styles.forgotPasswordContainer}>
         <View style={styles.toggleContainer}>
           <ToggleButton size={0.5} />
-          <Text style={styles.rememberMeText}>Remember me</Text>
+          <Text style={styles.rememberMeText}>Ghi nhớ</Text>
         </View>
         <Text
           style={styles.forgotPasswordText}
           onPress={() => navigation.navigate('ForgotPassword')}>
-          Forgot Password
+          Quên mật khẩu
         </Text>
       </View>
       <TouchableOpacity
@@ -131,7 +131,7 @@ const SigninScreen = ({navigation}) => {
         )}
       </TouchableOpacity>
       <View style={styles.signupContainer}>
-        <Text style={styles.accountText}>Don't have an account?</Text>
+        <Text style={styles.accountText}>Không có tài khoản?</Text>
         <Text
           style={styles.signupText}
           onPress={() => navigation.navigate('Signup')}>
@@ -145,7 +145,7 @@ const SigninScreen = ({navigation}) => {
             <Image source={Images.FACEBOOK} style={styles.signinButtonLogo} />
           </View>
           <Text style={styles.socialSigninButtonText}>
-            Connect with Facebook
+            Đăng nhập bằng Facebook
           </Text>
         </View>
       </TouchableOpacity>
@@ -154,7 +154,7 @@ const SigninScreen = ({navigation}) => {
           <View style={styles.signinButtonLogoContainer}>
             <Image source={Images.GOOGLE} style={styles.signinButtonLogo} />
           </View>
-          <Text style={styles.socialSigninButtonText}>Connect with Google</Text>
+          <Text style={styles.socialSigninButtonText}>Đăng nhập bằng Google</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -174,14 +174,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
-    lineHeight: 20 * 1.4,
+    fontWeight: 500,
+    lineHeight: 50 * 1.4,
     width: Display.setWidth(80),
     textAlign: 'center',
   },
   title: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     marginTop: 50,
     marginBottom: 10,
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginTop: 10,
     marginBottom: 20,
     marginHorizontal: 20,
@@ -226,13 +226,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 12 * 1.4,
     color: Colors.DEFAULT_GREY,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   forgotPasswordText: {
     fontSize: 12,
     lineHeight: 12 * 1.4,
     color: Colors.DEFAULT_GREEN,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
   },
   signinButton: {
     backgroundColor: Colors.DEFAULT_GREEN,
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 18 * 1.4,
     color: Colors.DEFAULT_WHITE,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   signupContainer: {
     marginHorizontal: 20,
@@ -260,20 +260,20 @@ const styles = StyleSheet.create({
     fontSize: 13,
     lineHeight: 13 * 1.4,
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    ffontWeight: 500,
   },
   signupText: {
     fontSize: 13,
     lineHeight: 13 * 1.4,
     color: Colors.DEFAULT_GREEN,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginLeft: 5,
   },
   orText: {
     fontSize: 15,
     lineHeight: 15 * 1.4,
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginLeft: 5,
     alignSelf: 'center',
   },
@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_WHITE,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   toggleContainer: {
     flexDirection: 'row',
@@ -325,7 +325,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     lineHeight: 10 * 1.4,
     color: Colors.DEFAULT_RED,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginHorizontal: 20,
     marginTop: 3,
     marginBottom: 10,

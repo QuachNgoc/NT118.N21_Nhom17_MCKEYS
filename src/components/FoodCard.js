@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   titleText: {
     width: Display.setWidth(60),
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     fontSize: 13,
     lineHeight: 13 * 1.4,
     marginBottom: 8,
@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
   descriptionText: {
     width: Display.setWidth(60),
     color: Colors.DEFAULT_GREY,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     fontSize: 10,
     lineHeight: 10 * 1.4,
     marginBottom: 8,
   },
   priceText: {
     color: Colors.DEFAULT_YELLOW,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     fontSize: 14,
     lineHeight: 14 * 1.4,
   },
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   },
   itemCountText: {
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     fontSize: 14,
     lineHeight: 14 * 1.4,
     marginHorizontal: 8,

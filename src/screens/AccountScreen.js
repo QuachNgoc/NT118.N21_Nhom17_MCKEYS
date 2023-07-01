@@ -56,8 +56,8 @@ const AccountScreen = ({navigation}) => {
           <Image style={styles.profileImage} source={Images.AVATAR} />
         </View>
         <View style={styles.profileTextContainer}>
-          <Text style={styles.nameText}>Ameen Farook</Text>
-          <Text style={styles.emailText}>ameeen.faroook@gmail.com</Text>
+          <Text style={styles.nameText}>User</Text>
+          <Text style={styles.emailText}>user@gmail.com</Text>
         </View>
       </View>
       <View style={styles.menuContainer}>
@@ -69,7 +69,7 @@ const AccountScreen = ({navigation}) => {
               color={Colors.DEFAULT_GREEN}
             />
           </View>
-          <Text style={styles.menuText}>My All {'\n'}Orders</Text>
+          <Text style={styles.menuText}>Tất cả {'\n'}Đơn hàng</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} activeOpacity={0.8}>
           <View style={{...styles.menuIcon, backgroundColor: Colors.LIGHT_RED}}>
@@ -79,7 +79,7 @@ const AccountScreen = ({navigation}) => {
               color={Colors.SECONDARY_RED}
             />
           </View>
-          <Text style={styles.menuText}>Offers {'&\n'} Promos</Text>
+          <Text style={styles.menuText}>Ưu đãi {'&\n'} Quảng cáo</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem} activeOpacity={0.8}>
           <View
@@ -90,11 +90,11 @@ const AccountScreen = ({navigation}) => {
               color={Colors.DEFAULT_YELLOW}
             />
           </View>
-          <Text style={styles.menuText}>Delivery Addresses</Text>
+          <Text style={styles.menuText}>Địa chỉ giao hàng</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.mainContainer}>
-        <Text style={styles.sectionHeaderText}>My Account</Text>
+        <Text style={styles.sectionHeaderText}>Tài khoản</Text>
         <TouchableOpacity style={styles.sectionContainer} activeOpacity={0.8}>
           <View style={styles.sectionTextContainer}>
             <Ionicons
@@ -102,7 +102,7 @@ const AccountScreen = ({navigation}) => {
               size={18}
               color={Colors.DEFAULT_GREEN}
             />
-            <Text style={styles.sectionText}>Manage Profile</Text>
+            <Text style={styles.sectionText}>Quản lý tài khoản</Text>
           </View>
           <Feather
             name="chevron-right"
@@ -117,7 +117,7 @@ const AccountScreen = ({navigation}) => {
               size={18}
               color={Colors.DEFAULT_GREEN}
             />
-            <Text style={styles.sectionText}>Payment</Text>
+            <Text style={styles.sectionText}>Thanh Toán</Text>
           </View>
           <Feather
             name="chevron-right"
@@ -126,23 +126,23 @@ const AccountScreen = ({navigation}) => {
           />
         </TouchableOpacity>
 
-        <Text style={styles.sectionHeaderText}>Notification</Text>
+        <Text style={styles.sectionHeaderText}>Thông báo</Text>
         <View style={styles.sectionContainer} activeOpacity={0.8}>
           <View style={styles.sectionTextContainer}>
             <Feather name="bell" size={18} color={Colors.DEFAULT_GREEN} />
-            <Text style={styles.sectionText}>Notification</Text>
+            <Text style={styles.sectionText}>Thông báo</Text>
           </View>
           <ToggleButton size={0.5} />
         </View>
         <View style={styles.sectionContainer} activeOpacity={0.8}>
           <View style={styles.sectionTextContainer}>
             <Feather name="bell" size={18} color={Colors.DEFAULT_GREEN} />
-            <Text style={styles.sectionText}>Promos & Offers Notification</Text>
+            <Text style={styles.sectionText}>Thông báo ưu đãi & quảng cáo</Text>
           </View>
           <ToggleButton size={0.5} />
         </View>
 
-        <Text style={styles.sectionHeaderText}>More</Text>
+        <Text style={styles.sectionHeaderText}>Thêm</Text>
         <View style={styles.sectionContainer} activeOpacity={0.8}>
           <View style={styles.sectionTextContainer}>
             <Ionicons
@@ -164,7 +164,7 @@ const AccountScreen = ({navigation}) => {
               size={18}
               color={Colors.DEFAULT_GREEN}
             />
-            <Text style={styles.sectionText}>Logout</Text>
+            <Text style={styles.sectionText}>Đăng xuất</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   },
   headerText: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     color: Colors.DEFAULT_WHITE,
   },
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
   },
   alertBadgeText: {
     fontSize: 10,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     lineHeight: 10 * 1.4,
     color: Colors.DEFAULT_WHITE,
   },
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
   },
   menuText: {
     fontSize: 12,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     lineHeight: 12 * 1.4,
     color: Colors.DEFAULT_BLACK,
     textAlign: 'center',
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
   },
   sectionHeaderText: {
     fontSize: 14,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     lineHeight: 14 * 1.4,
     color: Colors.DEFAULT_BLACK,
     marginTop: 25,

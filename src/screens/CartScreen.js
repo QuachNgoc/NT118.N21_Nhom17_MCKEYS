@@ -32,7 +32,7 @@ const CartScreen = ({navigation}) => {
           size={30}
           onPress={() => navigation.goBack()}
         />
-        <Text style={styles.headerTitle}>My Cart</Text>
+        <Text style={styles.headerTitle}>Giỏ hàng của tôi</Text>
       </View>
       {cart?.cartItems?.length > 0 ? (
         <>
@@ -51,7 +51,7 @@ const CartScreen = ({navigation}) => {
             <View style={styles.promoCodeContainer}>
               <View style={styles.rowAndCenter}>
                 <Entypo name="ticket" size={30} color={Colors.DEFAULT_YELLOW} />
-                <Text style={styles.promoCodeText}>Add Promo Code</Text>
+                <Text style={styles.promoCodeText}>Thêm mã giảm giá</Text>
               </View>
               <Ionicons
                 name="chevron-forward-outline"
@@ -61,19 +61,19 @@ const CartScreen = ({navigation}) => {
             </View>
             <View style={styles.amountContainer}>
               <View style={styles.amountSubContainer}>
-                <Text style={styles.amountLabelText}>Item Total</Text>
+                <Text style={styles.amountLabelText}>Tổng hàng</Text>
                 <Text style={styles.amountText}>
                   $ {cart?.metaData?.itemsTotal?.toFixed(2)}
                 </Text>
               </View>
               <View style={styles.amountSubContainer}>
-                <Text style={styles.amountLabelText}>Discount</Text>
+                <Text style={styles.amountLabelText}>Giảm giá</Text>
                 <Text style={styles.amountText}>
                   $ {cart?.metaData?.discount?.toFixed(2)}
                 </Text>
               </View>
               <View style={styles.amountSubContainer}>
-                <Text style={styles.amountLabelText}>Delivery Fee</Text>
+                <Text style={styles.amountLabelText}>Phí vận chuyển</Text>
                 <Text
                   style={{...styles.amountText, color: Colors.DEFAULT_GREEN}}>
                   Free
@@ -81,7 +81,7 @@ const CartScreen = ({navigation}) => {
               </View>
             </View>
             <View style={styles.totalContainer}>
-              <Text style={styles.totalText}>Total</Text>
+              <Text style={styles.totalText}>Tổng cộng</Text>
               <Text style={styles.totalText}>
                 $ {cart?.metaData?.grandTotal?.toFixed(2)}
               </Text>
@@ -93,7 +93,7 @@ const CartScreen = ({navigation}) => {
                   color={Colors.DEFAULT_WHITE}
                   size={20}
                 />
-                <Text style={styles.checkoutText}>Checkout</Text>
+                <Text style={styles.checkoutText}>Thanh toán</Text>
               </View>
               <Text style={styles.checkoutText}>
                 $ {cart?.metaData?.grandTotal?.toFixed(2)}
@@ -109,13 +109,13 @@ const CartScreen = ({navigation}) => {
             source={Images.EMPTY_CART}
             resizeMode="contain"
           />
-          <Text style={styles.emptyCartText}>Cart Empty</Text>
+          <Text style={styles.emptyCartText}>Giỏ hàng trống</Text>
           <Text style={styles.emptyCartSubText}>
-            Go ahead and order some tasty food
+            Mua thêm hàng
           </Text>
           <TouchableOpacity style={styles.addButtonEmpty}>
             <AntDesign name="plus" color={Colors.DEFAULT_WHITE} size={20} />
-            <Text style={styles.addButtonEmptyText}>Add Food</Text>
+            <Text style={styles.addButtonEmptyText}>Thêm đồ ăn</Text>
           </TouchableOpacity>
           <Separator height={Display.setHeight(15)} />
         </View>
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     width: Display.setWidth(80),
     textAlign: 'center',
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   },
   promoCodeText: {
     fontSize: 15,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 15 * 1.4,
     color: Colors.DEFAULT_BLACK,
     marginLeft: 10,
@@ -179,13 +179,13 @@ const styles = StyleSheet.create({
   },
   amountLabelText: {
     fontSize: 15,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     lineHeight: 15 * 1.4,
     color: Colors.DEFAULT_GREEN,
   },
   amountText: {
     fontSize: 15,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     lineHeight: 15 * 1.4,
     color: Colors.DEFAULT_BLACK,
   },
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
   },
   totalText: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     lineHeight: 20 * 1.4,
     color: Colors.DEFAULT_BLACK,
   },
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   },
   checkoutText: {
     fontSize: 16,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 16 * 1.4,
     color: Colors.DEFAULT_WHITE,
     marginLeft: 8,
@@ -228,13 +228,13 @@ const styles = StyleSheet.create({
   },
   emptyCartText: {
     fontSize: 30,
-    fontFamily: Fonts.POPPINS_LIGHT,
+    fontWeight: 300,
     lineHeight: 30 * 1.4,
     color: Colors.DEFAULT_GREEN,
   },
   emptyCartSubText: {
     fontSize: 12,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 12 * 1.4,
     color: Colors.INACTIVE_GREY,
   },
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
   },
   addButtonEmptyText: {
     fontSize: 12,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 12 * 1.4,
     color: Colors.DEFAULT_WHITE,
     marginLeft: 10,

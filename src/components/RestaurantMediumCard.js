@@ -82,14 +82,14 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 14,
     lineHeight: 14 * 1.4,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     color: Colors.DEFAULT_BLACK,
     marginBottom: 5,
   },
   tagsText: {
     fontSize: 11,
     lineHeight: 11 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_GREY,
     marginBottom: 7,
   },
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     marginLeft: 3,
     fontSize: 12,
     lineHeight: 12 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_BLACK,
   },
   deliveryDetailsIcon: {
@@ -112,13 +112,13 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 10,
     lineHeight: 10 * 1.4,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     color: Colors.DEFAULT_BLACK,
   },
   reviewsText: {
     fontSize: 10,
     lineHeight: 10 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_BLACK,
   },
 });

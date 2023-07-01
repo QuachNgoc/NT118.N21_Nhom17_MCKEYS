@@ -57,11 +57,11 @@ const RegisterPhoneScreen = ({navigation}) => {
           size={30}
           onPress={() => navigation.goBack()}
         />
-        <Text style={styles.headerTitle}>Register Phone</Text>
+        <Text style={styles.headerTitle}>Đăng ký bằng Điện thoại</Text>
       </View>
-      <Text style={styles.title}>Register Phone</Text>
+      <Text style={styles.title}>Đăng ký bằng Điện thoại</Text>
       <Text style={styles.content}>
-        Enter your registered phone number to login.
+      Nhập số điện thoại đã đăng ký để đăng nhập.
       </Text>
       <View
         style={styles.inputsContainer}
@@ -142,14 +142,14 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     width: Display.setWidth(80),
     textAlign: 'center',
   },
   title: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     lineHeight: 20 * 1.4,
     marginTop: 50,
     marginBottom: 10,
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 20,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginTop: 10,
     marginBottom: 20,
     marginHorizontal: 20,
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 14 * 1.4,
     color: Colors.DEFAULT_BLACK,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   inputText: {
     fontSize: 18,
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 18 * 1.4,
     color: Colors.DEFAULT_WHITE,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
 });
 

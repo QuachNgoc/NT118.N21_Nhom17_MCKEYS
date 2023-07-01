@@ -1,21 +1,21 @@
 const WELCOME_CONTENTS = [
   {
-    image: 'DISCOVER',
-    title: 'Discover places near you',
+    image: 'KHÁM PHÁ',
+    title: 'Khám phá quán ăn MCKEY gần bạn',
     content:
-      'We make it simple to find your favorite food. Enter your address and let us do the rest.',
+      'Chúng tôi làm cho nó đơn giản để tìm thức ăn yêu thích của bạn. Nhập địa chỉ của bạn và để chúng tôi làm phần còn lại.',
   },
   {
-    image: 'FAVORITE',
-    title: 'Order your favorite',
+    image: 'YÊU THÍCH',
+    title: 'Đặt hàng yêu thích của bạn',
     content:
-      'We will store your favorite foods based on your search and orders.',
+      'Chúng tôi sẽ lưu trữ các loại thực phẩm yêu thích của bạn dựa trên tìm kiếm và đơn đặt hàng của bạn.',
   },
   {
-    image: 'DELIVER',
-    title: 'Fastest Delivery',
+    image: 'GIAO',
+    title: 'Giao hàng nhanh nhất',
     content:
-      'We make food ordering fast, easy and free. No matter you paid online or cash.',
+      'Chúng tôi thực hiện đặt hàng thực phẩm nhanh chóng, dễ dàng và miễn phí. Bất kể bạn đã thanh toán trực tuyến hay tiền mặt.',
   },
 ];
 

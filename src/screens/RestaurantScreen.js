@@ -127,7 +127,7 @@ const RestaurantScreen = ({
                   style={styles.deliveryDetailIcon}
                   source={Images.DELIVERY_CHARGE}
                 />
-                <Text style={styles.deliveryDetailText}>Free Delivery</Text>
+                <Text style={styles.deliveryDetailText}>Miễn phí vận chuyển</Text>
               </View>
               <View style={styles.rowAndCenter}>
                 <Image
@@ -135,7 +135,7 @@ const RestaurantScreen = ({
                   source={Images.DELIVERY_TIME}
                 />
                 <Text style={styles.deliveryDetailText}>
-                  {restaurant?.time} min
+                  {restaurant?.time} phút
                 </Text>
               </View>
               <View style={styles.rowAndCenter}>
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 23,
     lineHeight: 23 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_BLACK,
   },
   tagText: {
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_GREY,
   },
   ratingReviewsContainer: {
@@ -238,14 +238,14 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
     color: Colors.DEFAULT_BLACK,
   },
   reviewsText: {
     marginLeft: 5,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_BLACK,
   },
   deliveryDetailsContainer: {
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
     marginLeft: 3,
     fontSize: 12,
     lineHeight: 12 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_BLACK,
   },
   deliveryDetailIcon: {
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   restaurantTypeText: {
     fontSize: 12,
     lineHeight: 12 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_YELLOW,
   },
   categoriesContainer: {

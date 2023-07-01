@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 22,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
   },
   contentText: {
     fontSize: 18,
-    fontFamily: Fonts.POPPINS_LIGHT,
+    fontWeight: 300,
     textAlign: 'center',
     marginHorizontal: 20,
   },

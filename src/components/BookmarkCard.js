@@ -87,14 +87,14 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 15,
     lineHeight: 15 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_BLACK,
     marginBottom: 5,
   },
   tagText: {
     fontSize: 11,
     lineHeight: 11 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_GREY,
     marginBottom: 5,
   },
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   locationText: {
     fontSize: 11,
     lineHeight: 11 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     color: Colors.DEFAULT_GREY,
     marginBottom: 5,
     marginLeft: 5,
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   ratingText: {
     fontSize: 12,
     lineHeight: 12 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
     color: Colors.DEFAULT_BLACK,
     marginLeft: 3,
   },

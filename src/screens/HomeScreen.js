@@ -58,8 +58,8 @@ const HomeScreen = ({navigation}) => {
             size={15}
             color={Colors.DEFAULT_WHITE}
           />
-          <Text style={styles.locationText}>Delivered to</Text>
-          <Text style={styles.selectedLocationText}>HOME</Text>
+          <Text style={styles.locationText}>Giao đến </Text>
+          <Text style={styles.selectedLocationText}>NHÀ</Text>
           <MaterialIcons
             name="keyboard-arrow-down"
             size={16}
@@ -82,7 +82,7 @@ const HomeScreen = ({navigation}) => {
               size={25}
               color={Colors.DEFAULT_GREY}
             />
-            <Text style={styles.searchText}>Search..</Text>
+            <Text style={styles.searchText}>Tìm kiếm...</Text>
           </View>
           <Feather
             name="sliders"
@@ -106,8 +106,8 @@ const HomeScreen = ({navigation}) => {
       <ScrollView style={styles.listContainer}>
         <View style={styles.horizontalListContainer}>
           <View style={styles.listHeader}>
-            <Text style={styles.listHeaderTitle}>Top Rated</Text>
-            <Text style={styles.listHeaderSubtitle}>See All</Text>
+            <Text style={styles.listHeaderTitle}>Xếp hạng hàng đầu</Text>
+            <Text style={styles.listHeaderSubtitle}>Xem hết</Text>
           </View>
           <FlatList
             data={restaurants}
@@ -131,31 +131,31 @@ const HomeScreen = ({navigation}) => {
             style={sortStyle(activeSortItem === 'recent')}
             activeOpacity={0.8}
             onPress={() => setActiveSortItem('recent')}>
-            <Text style={styles.sortListItemText}>Recent</Text>
+            <Text style={styles.sortListItemText}>Gần đây</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={sortStyle(activeSortItem === 'favorite')}
             activeOpacity={0.8}
             onPress={() => setActiveSortItem('favorite')}>
-            <Text style={styles.sortListItemText}>Favorite</Text>
+            <Text style={styles.sortListItemText}>Yêu thích</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={sortStyle(activeSortItem === 'rating')}
             activeOpacity={0.8}
             onPress={() => setActiveSortItem('rating')}>
-            <Text style={styles.sortListItemText}>Rating</Text>
+            <Text style={styles.sortListItemText}>Đánh giá</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={sortStyle(activeSortItem === 'popular')}
             activeOpacity={0.8}
             onPress={() => setActiveSortItem('popular')}>
-            <Text style={styles.sortListItemText}>Popular</Text>
+            <Text style={styles.sortListItemText}>Phổ biến</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={sortStyle(activeSortItem === 'trending')}
             activeOpacity={0.8}
             onPress={() => setActiveSortItem('trending')}>
-            <Text style={styles.sortListItemText}>Trending</Text>
+            <Text style={styles.sortListItemText}>Xu hướng</Text>
           </TouchableOpacity>
         </View>
         {restaurants?.map(item => (
@@ -196,14 +196,14 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   selectedLocationText: {
     color: Colors.DEFAULT_YELLOW,
     marginLeft: 5,
     fontSize: 14,
     lineHeight: 14 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   alertBadge: {
     borderRadius: 32,
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_WHITE,
     fontSize: 10,
     lineHeight: 10 * 1.4,
-    fontFamily: Fonts.POPPINS_BOLD,
+    fontWeight: 700,
   },
   searchContainer: {
     backgroundColor: Colors.DEFAULT_WHITE,
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_GREY,
     fontSize: 16,
     lineHeight: 16 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
     marginLeft: 10,
   },
   categoriesContainer: {
@@ -267,13 +267,13 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_BLACK,
     fontSize: 16,
     lineHeight: 16 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   listHeaderSubtitle: {
     color: Colors.DEFAULT_YELLOW,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_MEDIUM,
+    fontWeight: 500,
   },
   sortListContainer: {
     flexDirection: 'row',
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
     color: Colors.DEFAULT_BLACK,
     fontSize: 13,
     lineHeight: 13 * 1.4,
-    fontFamily: Fonts.POPPINS_SEMI_BOLD,
+    fontWeight: 300,
   },
 });
 
